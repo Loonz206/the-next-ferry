@@ -192,6 +192,9 @@ function buildSlowFerryFallback(): FerryDeparture[] {
       { depart: '13:30', arrive: '14:30', vessel: 'Issaquah', vehicleCapacity: 124 },
       { depart: '15:00', arrive: '16:00', vessel: 'Kaleetan', vehicleCapacity: 202 },
       { depart: '16:15', arrive: '17:15', vessel: 'Issaquah', vehicleCapacity: 124 },
+      { depart: '17:30', arrive: '18:30', vessel: 'Issaquah', vehicleCapacity: 124 },
+      { depart: '18:45', arrive: '19:45', vessel: 'Kaleetan', vehicleCapacity: 202 },
+      { depart: '19:50', arrive: '20:50', vessel: 'Issaquah', vehicleCapacity: 124 },
     ],
     westbound: [
       { depart: '06:05', arrive: '07:05', vessel: 'Kaleetan', vehicleCapacity: 202 },
