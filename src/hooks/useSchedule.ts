@@ -57,7 +57,7 @@ export function getUnavailableNotices(departures: FerryDeparture[]): FerryDepart
 function getTimeOfDay(time: string): TimeOfDay {
   const hour = Number.parseInt(time.split(':')[0], 10);
   if (hour < 9) return 'morning';
-  if (hour < 15) return 'midday';
+  if (hour < 17) return 'midday';
   return 'evening';
 }
 

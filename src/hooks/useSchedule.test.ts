@@ -126,7 +126,7 @@ describe('schedule helper functions', () => {
     const groups = groupByTimeOfDay([
       {
         ...monday.departures[0],
-        time: '15:00',
+        time: '17:00',
       },
       {
         ...monday.departures[0],
@@ -144,12 +144,36 @@ describe('schedule helper functions', () => {
         ...monday.departures[0],
         time: '16:00',
       },
+      {
+        ...monday.departures[0],
+        time: '21:40',
+      },
     ]);
 
     expect(groups.map(group => group.timeOfDay)).toEqual(['morning', 'midday', 'evening']);
     expect(groups[0].departures.map(dep => dep.time)).toEqual(['08:59']);
-    expect(groups[1].departures.map(dep => dep.time)).toEqual(['09:00', '14:59']);
-    expect(groups[2].departures.map(dep => dep.time)).toEqual(['15:00', '16:00']);
+    expect(groups[1].departures.map(dep => dep.time)).toEqual(['09:00', '14:59', '16:00']);
+    expect(groups[2].departures.map(dep => dep.time)).toEqual(['17:00', '21:40']);
+  });
+
+  it('keeps post-5PM departures in the evening group', () => {
+    const groups = groupByTimeOfDay([
+      {
+        ...monday.departures[0],
+        time: '16:59',
+      },
+      {
+        ...monday.departures[0],
+        time: '17:00',
+      },
+      {
+        ...monday.departures[0],
+        time: '19:40',
+      },
+    ]);
+
+    const evening = groups.find(group => group.timeOfDay === 'evening');
+    expect(evening?.departures.map(dep => dep.time)).toEqual(['17:00', '19:40']);
   });
 
   it('returns next available departure based on current time', () => {
