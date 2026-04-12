@@ -30,6 +30,26 @@ npm install
 npm run dev
 ```
 
+## Testing and quality
+
+This project uses Jest + React Testing Library for unit and integration tests.
+
+```bash
+# Run test suite once
+npm test
+
+# Watch mode
+npm run test:watch
+
+# Coverage report (enforced thresholds)
+npm run test:coverage
+
+# Linting with TypeScript + SonarSource maintainability rules
+npm run lint
+```
+
+Coverage thresholds are enforced globally and per file at 80%+ for statements, branches, functions, and lines.
+
 ### Fetch live schedule data
 
 Requires a free [WSDOT API key](https://wsdot.wa.gov/traffic/api/).

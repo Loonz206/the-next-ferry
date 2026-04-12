@@ -171,5 +171,6 @@ mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'schedule.json'), JSON.stringify(schedule, null, 2));
 
 console.log(`Generated schedule.json for week of ${schedule.weekStart}`);
-console.log(`  Days: ${days.map(d => `${d.dayOfWeek} (${d.date})`).join(', ')}`);
+const daySummary = days.map(d => `${d.dayOfWeek} (${d.date})`).join(', ');
+console.log(`  Days: ${daySummary}`);
 console.log(`  Total departures: ${days.reduce((sum, d) => sum + d.departures.length, 0)}`);

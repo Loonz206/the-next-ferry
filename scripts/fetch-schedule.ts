@@ -272,7 +272,8 @@ async function main() {
   writeFileSync(join(outDir, 'schedule.json'), JSON.stringify(schedule, null, 2));
 
   console.log(`Written to public/data/schedule.json`);
-  console.log(`  Days: ${days.map(d => `${d.dayOfWeek} (${d.date})`).join(', ')}`);
+  const daySummary = days.map(d => `${d.dayOfWeek} (${d.date})`).join(', ');
+  console.log(`  Days: ${daySummary}`);
   const totalDepartures = days.reduce((sum, d) => sum + d.departures.filter(dep => dep.available).length, 0);
   console.log(`  Total available departures: ${totalDepartures}`);
 }

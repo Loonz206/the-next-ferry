@@ -1,7 +1,18 @@
 import { useState, useEffect } from 'react';
 import type { WeekSchedule, DaySchedule, FerryDeparture, Direction, TimeGroup, TimeOfDay } from '../types/schedule';
 
-const SCHEDULE_URL = `${import.meta.env.BASE_URL}data/schedule.json`;
+interface AppGlobals {
+  __APP_BASE_URL__?: string;
+}
+
+function getAppBaseUrl(): string {
+  const appGlobals = globalThis as AppGlobals;
+  return appGlobals.__APP_BASE_URL__ ?? '/';
+}
+
+function getScheduleUrl(): string {
+  return `${getAppBaseUrl()}data/schedule.json`;
+}
 
 export function useSchedule() {
   const [schedule, setSchedule] = useState<WeekSchedule | null>(null);
@@ -9,7 +20,7 @@ export function useSchedule() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(SCHEDULE_URL)
+    fetch(getScheduleUrl())
       .then(res => {
         if (!res.ok) throw new Error(`Failed to load schedule: ${res.status}`);
         return res.json();
