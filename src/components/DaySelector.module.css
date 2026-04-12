@@ -1,0 +1,59 @@
+.selector {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+}
+
+.selector::-webkit-scrollbar {
+  display: none;
+}
+
+.dayButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+  min-width: 52px;
+}
+
+.dayButton:hover {
+  background: var(--hover-bg);
+}
+
+.dayButton.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.dayButton.active .dayLabel,
+.dayButton.active .dateLabel {
+  color: #fff;
+}
+
+.dayButton.today:not(.active) {
+  border-color: var(--accent-color);
+}
+
+.dayLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.dateLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}

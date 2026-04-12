@@ -1,0 +1,49 @@
+.dayView {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.groupHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  padding: 0 4px;
+}
+
+.departureList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.noService {
+  text-align: center;
+  padding: 32px 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.unavailableNotice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--unavailable-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.unavailableIcon {
+  font-size: 1rem;
+}

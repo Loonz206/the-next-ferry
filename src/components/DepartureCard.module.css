@@ -1,0 +1,91 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.15s ease;
+}
+
+.card.nextDeparture {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px var(--accent-color);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.badge.fast {
+  background: var(--fast-color);
+}
+
+.badge.slow {
+  background: var(--slow-color);
+}
+
+.badge.unavailable {
+  background: var(--unavailable-color);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.times {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.arrow {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.metaTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.crossing {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.unavailableCard {
+  opacity: 0.5;
+}
+
+.unavailableCard .times {
+  color: var(--text-secondary);
+}

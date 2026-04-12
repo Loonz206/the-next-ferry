@@ -1,0 +1,39 @@
+.toggle {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.option {
+  flex: 1;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.option:first-child {
+  border-right: 1px solid var(--border-color);
+}
+
+.option.active {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 1px;
+}

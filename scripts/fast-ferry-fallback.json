@@ -1,0 +1,60 @@
+{
+  "effectiveDate": "2025-10-01",
+  "notes": "Kitsap Transit Bremerton Fast Ferry. Weekdays only (Mon-Fri). Saturday service May-Sep. No Sunday. Passenger-only. ~30 min crossing.",
+  "weekday": {
+    "eastbound": [
+      { "depart": "04:40", "arrive": "05:10" },
+      { "depart": "05:25", "arrive": "05:55" },
+      { "depart": "06:05", "arrive": "06:35" },
+      { "depart": "06:45", "arrive": "07:15" },
+      { "depart": "07:25", "arrive": "07:55" },
+      { "depart": "08:05", "arrive": "08:35" },
+      { "depart": "08:35", "arrive": "09:05" },
+      { "depart": "09:15", "arrive": "09:45" },
+      { "depart": "09:50", "arrive": "10:20" },
+      { "depart": "10:25", "arrive": "10:55" },
+      { "depart": "13:50", "arrive": "14:20" },
+      { "depart": "15:05", "arrive": "15:35" },
+      { "depart": "15:45", "arrive": "16:15" },
+      { "depart": "16:25", "arrive": "16:55" },
+      { "depart": "17:00", "arrive": "17:30" },
+      { "depart": "17:45", "arrive": "18:15" },
+      { "depart": "18:20", "arrive": "18:50" },
+      { "depart": "19:05", "arrive": "19:35" },
+      { "depart": "19:40", "arrive": "20:10" },
+      { "depart": "21:00", "arrive": "21:30" }
+    ],
+    "westbound": [
+      { "depart": "05:20", "arrive": "05:50" },
+      { "depart": "06:05", "arrive": "06:35" },
+      { "depart": "06:45", "arrive": "07:15" },
+      { "depart": "07:25", "arrive": "07:55" },
+      { "depart": "08:00", "arrive": "08:30" },
+      { "depart": "08:40", "arrive": "09:10" },
+      { "depart": "09:10", "arrive": "09:40" },
+      { "depart": "09:50", "arrive": "10:20" },
+      { "depart": "10:25", "arrive": "10:55" },
+      { "depart": "11:00", "arrive": "11:30" },
+      { "depart": "14:25", "arrive": "14:55" },
+      { "depart": "15:45", "arrive": "16:15" },
+      { "depart": "16:25", "arrive": "16:55" },
+      { "depart": "17:05", "arrive": "17:35" },
+      { "depart": "17:40", "arrive": "18:10" },
+      { "depart": "18:25", "arrive": "18:55" },
+      { "depart": "19:00", "arrive": "19:30" },
+      { "depart": "19:40", "arrive": "20:10" },
+      { "depart": "20:20", "arrive": "20:50" },
+      { "depart": "21:40", "arrive": "22:10" }
+    ]
+  },
+  "saturday": {
+    "available": true,
+    "seasonalNote": "Saturday service operates May through September only",
+    "eastbound": [],
+    "westbound": []
+  },
+  "sunday": {
+    "available": false,
+    "note": "No Sunday service"
+  }
+}

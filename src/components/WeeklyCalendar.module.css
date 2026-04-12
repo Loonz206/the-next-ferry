@@ -1,0 +1,71 @@
+.calendar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+  }
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dayHeader {
+  text-align: center;
+  padding: 8px 4px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.dayHeader.today {
+  border-bottom-color: var(--accent-color);
+}
+
+.dayName {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.dayDate {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dayHeader.today .dayDate {
+  color: var(--accent-color);
+}
+
+.timeGroupLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  padding: 8px 0 4px;
+  border-top: 1px solid var(--border-color);
+}
+
+.departureList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.unavailableNotice {
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--unavailable-bg);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
