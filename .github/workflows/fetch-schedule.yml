@@ -2,8 +2,8 @@ name: Fetch Schedule & Deploy
 
 on:
   schedule:
-    # Daily at 5am UTC (~10pm PT) — refresh for the next day
-    - cron: '0 5 * * *'
+    # Daily at 10:30am UTC (~3:30am PDT) — fresh data ~70min before first 4:40am ferry
+    - cron: '30 10 * * *'
   workflow_dispatch: {}
   push:
     branches: [main]
