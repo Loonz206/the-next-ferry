@@ -19,6 +19,13 @@ Checking two separate websites to piece together the full picture is a pain. Thi
 
 On mobile you see a day-at-a-time view with a day selector strip. On desktop (≥768px) it expands to a 7-column weekly calendar so you can plan ahead.
 
+Passenger fares are shown above the direction filter so you can compare typical adult walk-on costs quickly:
+
+- WSF (Seattle to Bremerton): $11.05
+- WSF (Bremerton to Seattle): No charge
+- Kitsap Fast Ferry (Seattle to Bremerton): $13.00
+- Kitsap Fast Ferry (Bremerton to Seattle): $2.00
+
 ## Schedule data flow
 
 The app always renders the checked-in `public/data/schedule.json` file at runtime.
@@ -28,6 +35,18 @@ The app always renders the checked-in `public/data/schedule.json` file at runtim
 - Push to `main`: GitHub Actions validates `WSDOT_API_KEY`, regenerates `public/data/schedule.json`, commits it if needed, then builds and deploys the app.
 
 WSF schedule data comes from the official [WSDOT Ferries schedule REST help](https://www.wsdot.wa.gov/ferries/api/schedule/rest/help) via the `/schedule/{TripDate}/{DepartingTerminalID}/{ArrivingTerminalID}` endpoint. Because WSDOT only serves schedules from today forward, the generated artifact is a rolling 7-day window starting on the generation date. Fast ferry data is still maintained locally in `scripts/fast-ferry-fallback.json` and should be updated manually when Kitsap Transit changes service.
+
+## Footer fallback links
+
+The app footer includes links to primary data and live service updates, so users can still reach official sources if schedule data is unavailable in the UI:
+
+- Washington State Department of Transportation - Bremerton / Seattle: https://wsdot.com/ferries/schedule/scheduledetailbyroute.aspx?route=sea-br
+- WSDOT fare details (Seattle -> Bremerton): https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=7&arrivingterm=4
+- WSDOT fare details (Bremerton -> Seattle): https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=4&arrivingterm=7
+- Kitsap Transit Fast Ferry service page: https://www.kitsaptransit.com/service/fast-ferry
+- Kitsap Transit fares page: https://www.kitsaptransit.com/fares/fares
+- WSF announcements on Bluesky: https://bsky.app/profile/ferries.wsdot.wa.gov
+- Kitsap Transit announcements on X: https://x.com/KitsapTransit
 
 ## Local development
 

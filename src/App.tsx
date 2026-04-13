@@ -16,16 +16,15 @@ function App() {
     return <div className={styles.loading}>Loading ferry schedule…</div>;
   }
 
-  if (error || !schedule) {
-    return <div className={styles.error}>{error ?? 'Schedule data is unavailable.'}</div>;
-  }
-
-  // If today isn't in the schedule week, default to first day
-  const effectiveDate = schedule.days.some(d => d.date === selectedDate)
+  const scheduleData = !error && schedule ? schedule : null;
+  const effectiveDate = scheduleData && scheduleData.days.some(d => d.date === selectedDate)
     ? selectedDate
-    : schedule.days[0].date;
-
-  const currentDay = getDaySchedule(schedule, effectiveDate);
+    : scheduleData
+      ? scheduleData.days[0].date
+      : null;
+  const currentDay = scheduleData && effectiveDate
+    ? getDaySchedule(scheduleData, effectiveDate)
+    : null;
 
   return (
     <div className={styles.app}>
@@ -39,43 +38,103 @@ function App() {
         </p>
       </header>
 
-      <div className={styles.controls}>
-        <DirectionToggle direction={direction} onChange={setDirection} />
-        <div className={styles.legend}>
-          <span className={styles.legendItem}>
-            <span className={`${styles.legendDot} ${styles.fast}`} />{' '}
-            Fast Ferry (~30 min, passengers)
-          </span>
-          <span className={styles.legendItem}>
-            <span className={`${styles.legendDot} ${styles.slow}`} />{' '}
-            WSF (~60 min, cars + passengers)
-          </span>
-        </div>
-      </div>
+      {scheduleData ? (
+        <>
+          <section className={styles.fares} aria-label="Passenger fares">
+            <h2 className={styles.faresTitle}>Passenger fares</h2>
+            <div className={styles.faresGrid}>
+              <article className={styles.fareCard}>
+                <h3 className={styles.fareCardTitle}>WSF (car ferry)</h3>
+                <p className={styles.fareRow}>Bremerton to Seattle: <strong>No charge</strong></p>
+                <p className={styles.fareRow}>Seattle to Bremerton: <strong>$11.05</strong></p>
+              </article>
+              <article className={styles.fareCard}>
+                <h3 className={styles.fareCardTitle}>Kitsap Fast Ferry</h3>
+                <p className={styles.fareRow}>Bremerton to Seattle: <strong>$2.00</strong></p>
+                <p className={styles.fareRow}>Seattle to Bremerton: <strong>$13.00</strong></p>
+              </article>
+            </div>
+            <p className={styles.faresMeta}>
+              Adult passenger fares from official WSDOT and Kitsap Transit fare pages.
+            </p>
+          </section>
 
-      {/* Mobile: day selector + single day view */}
-      <div className={styles.mobileView}>
-        <DaySelector
-          days={schedule.days}
-          selectedDate={effectiveDate}
-          onSelect={setSelectedDate}
-        />
-        {currentDay && (
-          <div style={{ marginTop: 16 }}>
-            <DayView day={currentDay} direction={direction} />
+          <div className={styles.controls}>
+            <DirectionToggle direction={direction} onChange={setDirection} />
+            <div className={styles.legend}>
+              <span className={styles.legendItem}>
+                <span className={`${styles.legendDot} ${styles.fast}`} />{' '}
+                Fast Ferry (~30 min, passengers)
+              </span>
+              <span className={styles.legendItem}>
+                <span className={`${styles.legendDot} ${styles.slow}`} />{' '}
+                WSF (~60 min, cars + passengers)
+              </span>
+            </div>
           </div>
-        )}
-      </div>
 
-      {/* Desktop: full weekly calendar */}
-      <div className={styles.desktopView}>
-        <WeeklyCalendar schedule={schedule} direction={direction} />
-      </div>
+          {/* Mobile: day selector + single day view */}
+          <div className={styles.mobileView}>
+            {effectiveDate && (
+              <DaySelector
+                days={scheduleData.days}
+                selectedDate={effectiveDate}
+                onSelect={setSelectedDate}
+              />
+            )}
+            {currentDay && (
+              <div style={{ marginTop: 16 }}>
+                <DayView day={currentDay} direction={direction} />
+              </div>
+            )}
+          </div>
 
-      <div className={styles.generated}>
-        Schedule generated {new Date(schedule.generated).toLocaleDateString()} ·
-        Starts {new Date(schedule.weekStart + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-      </div>
+          {/* Desktop: full weekly calendar */}
+          <div className={styles.desktopView}>
+            <WeeklyCalendar schedule={scheduleData} direction={direction} />
+          </div>
+
+          <div className={styles.generated}>
+            Schedule generated {new Date(scheduleData.generated).toLocaleDateString()} ·
+            Starts {new Date(scheduleData.weekStart + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+          </div>
+        </>
+      ) : (
+        <div className={styles.error}>{error ?? 'Schedule data is unavailable.'}</div>
+      )}
+
+      <footer className={styles.footer} aria-label="Schedule data and announcements">
+        <div className={styles.footerSection}>
+          <h2 className={styles.footerHeading}>Data Sources</h2>
+          <ul className={styles.footerLinks}>
+            <li>
+              <a href="https://wsdot.com/ferries/schedule/scheduledetailbyroute.aspx?route=sea-br" target="_blank" rel="noopener noreferrer">
+                Washington State Department of Transportation - Bremerton / Seattle
+              </a>
+            </li>
+            <li>
+              <a href="https://www.kitsaptransit.com/service/fast-ferry" target="_blank" rel="noopener noreferrer">
+                Kitsap Transit Fast Ferry Service
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.footerSection}>
+          <h2 className={styles.footerHeading}>Announcements</h2>
+          <ul className={styles.footerLinks}>
+            <li>
+              <a href="https://bsky.app/profile/ferries.wsdot.wa.gov" target="_blank" rel="noopener noreferrer">
+                WSF updates on Bluesky (@ferries.wsdot.wa.gov)
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/KitsapTransit" target="_blank" rel="noopener noreferrer">
+                Kitsap Transit updates on X (@KitsapTransit)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 }

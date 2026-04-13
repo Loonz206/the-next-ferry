@@ -47,6 +47,57 @@ describe('App', () => {
     render(<App />);
 
     expect(screen.getByText('Failed to load')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Washington State Department of Transportation - Bremerton \/ Seattle/i })).toHaveAttribute(
+      'href',
+      'https://wsdot.com/ferries/schedule/scheduledetailbyroute.aspx?route=sea-br',
+    );
+  });
+
+  it('renders footer data source and announcements links with safe external attrs', () => {
+    mockUseSchedule.mockReturnValue({
+      schedule: cloneSchedule(),
+      loading: false,
+      error: null,
+    });
+
+    render(<App />);
+
+    const wsdotLink = screen.getByRole('link', { name: /Washington State Department of Transportation - Bremerton \/ Seattle/i });
+    const kitsapServiceLink = screen.getByRole('link', { name: /Kitsap Transit Fast Ferry Service/i });
+    const wsfBlueskyLink = screen.getByRole('link', { name: /WSF updates on Bluesky/i });
+    const kitsapXLink = screen.getByRole('link', { name: /Kitsap Transit updates on X/i });
+
+    expect(wsdotLink).toHaveAttribute('href', 'https://wsdot.com/ferries/schedule/scheduledetailbyroute.aspx?route=sea-br');
+    expect(kitsapServiceLink).toHaveAttribute('href', 'https://www.kitsaptransit.com/service/fast-ferry');
+    expect(wsfBlueskyLink).toHaveAttribute('href', 'https://bsky.app/profile/ferries.wsdot.wa.gov');
+    expect(kitsapXLink).toHaveAttribute('href', 'https://x.com/KitsapTransit');
+
+    expect(wsdotLink).toHaveAttribute('target', '_blank');
+    expect(wsdotLink).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('renders passenger fares above controls', () => {
+    mockUseSchedule.mockReturnValue({
+      schedule: cloneSchedule(),
+      loading: false,
+      error: null,
+    });
+
+    render(<App />);
+
+    expect(screen.getByRole('heading', { name: /Passenger fares/i })).toBeInTheDocument();
+    expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
+      /Bremerton to Seattle:\s*No charge/i,
+    );
+    expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
+      /Seattle to Bremerton:\s*\$11\.05/i,
+    );
+    expect(screen.getByText(/Kitsap Fast Ferry/i).closest('article')).toHaveTextContent(
+      /Bremerton to Seattle:\s*\$2\.00/i,
+    );
+    expect(screen.getByText(/Kitsap Fast Ferry/i).closest('article')).toHaveTextContent(
+      /Seattle to Bremerton:\s*\$13\.00/i,
+    );
   });
 
   it('falls back to first schedule day when today is not in week', () => {
