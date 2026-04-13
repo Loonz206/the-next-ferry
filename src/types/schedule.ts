@@ -27,7 +27,7 @@ export interface DaySchedule {
 }
 
 export interface WeekSchedule {
-  /** ISO date of the Monday */
+  /** ISO date of the first generated day in the 7-day schedule window */
   weekStart: string;
   generated: string;
   days: DaySchedule[];

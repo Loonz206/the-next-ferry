@@ -14,6 +14,14 @@ function getScheduleUrl(): string {
   return `${getAppBaseUrl()}data/schedule.json`;
 }
 
+function getScheduleLoadError(status: number): string {
+  if (status === 404) {
+    return 'Schedule data is missing. Run npm run fetch-schedule locally or pull the latest public/data/schedule.json.';
+  }
+
+  return `Failed to load schedule: ${status}`;
+}
+
 export function useSchedule() {
   const [schedule, setSchedule] = useState<WeekSchedule | null>(null);
   const [loading, setLoading] = useState(true);
@@ -22,7 +30,7 @@ export function useSchedule() {
   useEffect(() => {
     fetch(getScheduleUrl())
       .then(res => {
-        if (!res.ok) throw new Error(`Failed to load schedule: ${res.status}`);
+        if (!res.ok) throw new Error(getScheduleLoadError(res.status));
         return res.json();
       })
       .then((data: WeekSchedule) => {
@@ -102,7 +110,10 @@ export function getNextDeparture(departures: FerryDeparture[]): FerryDeparture |
 
 export function getTodayDate(): string {
   const d = new Date();
-  return d.toISOString().split('T')[0];
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 export function formatTime12h(time24: string): string {

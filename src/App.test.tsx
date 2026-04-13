@@ -46,7 +46,7 @@ describe('App', () => {
 
     render(<App />);
 
-    expect(screen.getByText(/Failed to load schedule/i)).toBeInTheDocument();
+    expect(screen.getByText('Failed to load')).toBeInTheDocument();
   });
 
   it('falls back to first schedule day when today is not in week', () => {

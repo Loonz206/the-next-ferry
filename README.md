@@ -19,9 +19,15 @@ Checking two separate websites to piece together the full picture is a pain. Thi
 
 On mobile you see a day-at-a-time view with a day selector strip. On desktop (≥768px) it expands to a 7-column weekly calendar so you can plan ahead.
 
-## Data freshness
+## Schedule data flow
 
-Schedule data is fetched daily via a GitHub Actions cron job and committed as `public/data/schedule.json`. WSF data comes from the [WSDOT Ferries REST API](https://www.wsdot.wa.gov/ferries/api/schedule/documentation/) and requires a valid API key to generate slow-ferry schedule output. Fast ferry data uses a static schedule derived from published Kitsap Transit service times (updated manually when the schedule changes).
+The app always renders the checked-in `public/data/schedule.json` file at runtime.
+
+- Local development: `npm run dev` serves the committed `public/data/schedule.json`. If you want fresher WSF data locally, run `npm run fetch-schedule` first.
+- Production build: `npm run build` bundles the existing `public/data/schedule.json`. The build does not call WSDOT directly.
+- Push to `main`: GitHub Actions validates `WSDOT_API_KEY`, regenerates `public/data/schedule.json`, commits it if needed, then builds and deploys the app.
+
+WSF schedule data comes from the official [WSDOT Ferries schedule REST help](https://www.wsdot.wa.gov/ferries/api/schedule/rest/help) via the `/schedule/{TripDate}/{DepartingTerminalID}/{ArrivingTerminalID}` endpoint. Because WSDOT only serves schedules from today forward, the generated artifact is a rolling 7-day window starting on the generation date. Fast ferry data is still maintained locally in `scripts/fast-ferry-fallback.json` and should be updated manually when Kitsap Transit changes service.
 
 ## Local development
 
@@ -29,6 +35,8 @@ Schedule data is fetched daily via a GitHub Actions cron job and committed as `p
 npm install
 npm run dev
 ```
+
+If `public/data/schedule.json` is missing, the app will tell you to run `npm run fetch-schedule` locally or pull the latest generated file.
 
 ## Testing and quality
 
@@ -50,7 +58,7 @@ npm run lint
 
 Coverage thresholds are enforced globally and per file at 80%+ for statements, branches, functions, and lines.
 
-### Fetch live schedule data
+### Regenerate WSF schedule data
 
 Requires a free [WSDOT API key](https://wsdot.wa.gov/traffic/api/).
 
@@ -61,21 +69,17 @@ cp .env.example .env
 # 2) Add your key in .env
 # WSDOT_API_KEY=your_key
 
-# 3) Load .env into your shell for this command and run fetch
-set -a && source .env && set +a && npx tsx scripts/fetch-schedule.ts
-
-# Optional: export once in your shell profile instead
-export WSDOT_API_KEY=your_key
-npx tsx scripts/fetch-schedule.ts
+# 3) Generate the current 7-day schedule artifact
+npm run fetch-schedule
 ```
 
-The script fails fast if `WSDOT_API_KEY` is missing or WSDOT data cannot be parsed for the requested week.
+`scripts/fetch-schedule.ts` loads `.env` automatically via `dotenv/config`, so there is no need to `source` the file first. The script fails fast if `WSDOT_API_KEY` is missing or WSDOT data cannot be parsed for the requested week.
 
 Do not commit secrets. Keep `.env` local only.
 
 ## Deployment
 
-The app deploys to GitHub Pages automatically on every push to `main`. The cron job runs daily at 5am UTC to refresh the schedule.
+The app deploys to GitHub Pages automatically on every push to `main`. The cron job runs daily at `10:30 UTC` to refresh `public/data/schedule.json` before the build.
 
 ### Required GitHub setup
 

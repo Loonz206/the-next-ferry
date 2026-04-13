@@ -79,6 +79,24 @@ describe('useSchedule hook', () => {
     expect(result.current.error).toBe('Failed to load schedule: 500');
   });
 
+  it('surfaces recovery guidance when the generated schedule file is missing', async () => {
+    fetchMock.mockResolvedValue({
+      ok: false,
+      status: 404,
+    } as Response);
+
+    const { result } = renderHook(() => useSchedule());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    expect(result.current.schedule).toBeNull();
+    expect(result.current.error).toBe(
+      'Schedule data is missing. Run npm run fetch-schedule locally or pull the latest public/data/schedule.json.',
+    );
+  });
+
   it('sets error on fetch rejection', async () => {
     fetchMock.mockRejectedValue(new Error('Network down'));
 
@@ -227,7 +245,7 @@ describe('schedule helper functions', () => {
 
   it('returns today date in YYYY-MM-DD format', () => {
     jest.useFakeTimers();
-    jest.setSystemTime(new Date('2026-04-12T12:00:00.000Z'));
+    jest.setSystemTime(new Date('2026-04-12T12:00:00'));
 
     expect(getTodayDate()).toBe('2026-04-12');
   });

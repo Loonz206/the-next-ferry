@@ -17,7 +17,7 @@ function App() {
   }
 
   if (error || !schedule) {
-    return <div className={styles.error}>Failed to load schedule: {error}</div>;
+    return <div className={styles.error}>{error ?? 'Schedule data is unavailable.'}</div>;
   }
 
   // If today isn't in the schedule week, default to first day
@@ -74,7 +74,7 @@ function App() {
 
       <div className={styles.generated}>
         Schedule generated {new Date(schedule.generated).toLocaleDateString()} ·
-        Week of {new Date(schedule.weekStart + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+        Starts {new Date(schedule.weekStart + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
       </div>
     </div>
   );

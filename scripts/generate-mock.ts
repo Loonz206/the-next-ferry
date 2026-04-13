@@ -1,4 +1,9 @@
+/// <reference types="node" />
+
 import type { WeekSchedule, DaySchedule, FerryDeparture, Direction } from '../src/types/schedule';
+
+// Non-production helper for local UI/testing experiments only.
+// The canonical schedule generation path is scripts/fetch-schedule.ts.
 
 // WSDOT Bremerton Ferry (slow) — daily schedule, ~60 min crossing
 // Valid Mar 22 – Jun 13, 2026. Vessels: Kaleetan, Issaquah
@@ -38,7 +43,7 @@ const slowFerrySchedule: Record<Direction, Array<{ depart: string; arrive: strin
   ],
 };
 
-// Fast ferry fallback (weekdays only, Oct 2025 schedule)
+// Fast ferry fallback (manually maintained; see scripts/fast-ferry-fallback.json)
 import fastFerryData from './fast-ferry-fallback.json';
 
 function getDayOfWeek(dateStr: string): string {
@@ -64,9 +69,52 @@ function isFastFerryAvailable(dateStr: string): boolean {
   return false; // Sunday
 }
 
+function getFastFerryUnavailableDepartures(reason: string): FerryDeparture[] {
+  return (['eastbound', 'westbound'] as Direction[]).map(direction => ({
+    time: '00:00',
+    arrivalTime: '00:00',
+    direction,
+    type: 'fast',
+    available: false,
+    crossingMinutes: 30,
+    unavailableReason: reason,
+  }));
+}
+
+function buildFastFerryDepartures(dateStr: string): FerryDeparture[] {
+  const fastAvailable = isFastFerryAvailable(dateStr);
+
+  if (!fastAvailable) {
+    const reason = isSaturday(dateStr)
+      ? 'Saturday fast ferry runs May–Sep only'
+      : 'No Sunday fast ferry service';
+    return getFastFerryUnavailableDepartures(reason);
+  }
+
+  const dailySchedule = isWeekday(dateStr) ? fastFerryData.weekday : fastFerryData.saturday;
+  const departures = (['eastbound', 'westbound'] as Direction[]).flatMap(direction =>
+    dailySchedule[direction].map((sailing: { depart: string; arrive: string }) => ({
+      time: sailing.depart,
+      arrivalTime: sailing.arrive,
+      direction,
+      type: 'fast' as const,
+      available: true,
+      crossingMinutes: 30,
+    })),
+  );
+
+  if (departures.length > 0) {
+    return departures;
+  }
+
+  const reason = isSaturday(dateStr)
+    ? 'Saturday fast ferry schedule is not configured in scripts/fast-ferry-fallback.json.'
+    : 'Fast ferry schedule data is missing from scripts/fast-ferry-fallback.json.';
+  return getFastFerryUnavailableDepartures(reason);
+}
+
 function buildDaySchedule(dateStr: string): DaySchedule {
   const departures: FerryDeparture[] = [];
-  const fastAvailable = isFastFerryAvailable(dateStr);
 
   // Add slow ferry departures (daily — same every day)
   for (const direction of ['eastbound', 'westbound'] as Direction[]) {
@@ -84,45 +132,7 @@ function buildDaySchedule(dateStr: string): DaySchedule {
     }
   }
 
-  // Add fast ferry departures
-  if (fastAvailable && isWeekday(dateStr)) {
-    for (const direction of ['eastbound', 'westbound'] as Direction[]) {
-      const sailings = fastFerryData.weekday[direction];
-      for (const sailing of sailings) {
-        departures.push({
-          time: sailing.depart,
-          arrivalTime: sailing.arrive,
-          direction,
-          type: 'fast',
-          available: true,
-          crossingMinutes: 30,
-        });
-      }
-    }
-  } else if (!fastAvailable) {
-    // Add a single "unavailable" marker for fast ferry
-    const reason = isSaturday(dateStr)
-      ? 'Saturday fast ferry runs May–Sep only'
-      : 'No Sunday fast ferry service';
-    departures.push({
-      time: '00:00',
-      arrivalTime: '00:00',
-      direction: 'eastbound',
-      type: 'fast',
-      available: false,
-      crossingMinutes: 30,
-      unavailableReason: reason,
-    });
-    departures.push({
-      time: '00:00',
-      arrivalTime: '00:00',
-      direction: 'westbound',
-      type: 'fast',
-      available: false,
-      crossingMinutes: 30,
-      unavailableReason: reason,
-    });
-  }
+  departures.push(...buildFastFerryDepartures(dateStr));
 
   return {
     date: dateStr,
@@ -131,31 +141,25 @@ function buildDaySchedule(dateStr: string): DaySchedule {
   };
 }
 
-function getMonday(fromDate: Date): Date {
-  const d = new Date(fromDate);
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
-  d.setDate(diff);
-  return d;
-}
-
 function formatDate(d: Date): string {
-  return d.toISOString().split('T')[0];
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
-// Generate a week of schedule data starting from the Monday of the current week
-const today = new Date('2026-04-12T12:00:00');
-const monday = getMonday(today);
+// Generate a 7-day rolling schedule window starting from the reference date
+const startDate = new Date('2026-04-12T12:00:00');
 
 const days: DaySchedule[] = [];
 for (let i = 0; i < 7; i++) {
-  const d = new Date(monday);
-  d.setDate(monday.getDate() + i);
+  const d = new Date(startDate);
+  d.setDate(startDate.getDate() + i);
   days.push(buildDaySchedule(formatDate(d)));
 }
 
 const schedule: WeekSchedule = {
-  weekStart: formatDate(monday),
+  weekStart: formatDate(startDate),
   generated: new Date().toISOString(),
   days,
 };

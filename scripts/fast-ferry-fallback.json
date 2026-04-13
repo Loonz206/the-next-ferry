@@ -1,6 +1,7 @@
 {
   "effectiveDate": "2025-10-01",
-  "notes": "Kitsap Transit Bremerton Fast Ferry. Weekdays only (Mon-Fri). Saturday service May-Sep. No Sunday. Passenger-only. ~30 min crossing.",
+  "notes": "Kitsap Transit Bremerton Fast Ferry. Manually maintained local fallback data for build-time schedule generation. Weekdays only (Mon-Fri). Saturday service May-Sep. No Sunday. Passenger-only. ~30 min crossing.",
+  "source": "Update from published Kitsap Transit schedule whenever service changes.",
   "weekday": {
     "eastbound": [
       { "depart": "04:40", "arrive": "05:10" },
