@@ -1,6 +1,6 @@
 {
   "weekStart": "2026-04-13",
-  "generated": "2026-04-13T02:24:43.598Z",
+  "generated": "2026-04-13T11:50:04.196Z",
   "days": [
     {
       "date": "2026-04-13",
@@ -12,7 +12,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -21,7 +21,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -30,7 +30,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -39,7 +39,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -48,7 +48,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -57,7 +57,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -66,7 +66,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -75,7 +75,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -84,7 +84,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -93,7 +93,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -102,7 +102,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -111,7 +111,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -120,7 +120,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -129,7 +129,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -138,7 +138,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -147,7 +147,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -156,7 +156,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -165,7 +165,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -174,7 +174,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -183,7 +183,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -192,7 +192,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -201,7 +201,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -210,7 +210,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -219,7 +219,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -228,7 +228,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -237,7 +237,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -246,7 +246,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -255,7 +255,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -264,7 +264,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -273,7 +273,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
