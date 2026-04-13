@@ -40,25 +40,6 @@ function App() {
 
       {scheduleData ? (
         <>
-          <section className={styles.fares} aria-label="Passenger fares">
-            <h2 className={styles.faresTitle}>Passenger fares</h2>
-            <div className={styles.faresGrid}>
-              <article className={styles.fareCard}>
-                <h3 className={styles.fareCardTitle}>WSF (car ferry)</h3>
-                <p className={styles.fareRow}>Bremerton to Seattle: <strong>No charge</strong></p>
-                <p className={styles.fareRow}>Seattle to Bremerton: <strong>$11.05</strong></p>
-              </article>
-              <article className={styles.fareCard}>
-                <h3 className={styles.fareCardTitle}>Kitsap Fast Ferry</h3>
-                <p className={styles.fareRow}>Bremerton to Seattle: <strong>$2.00</strong></p>
-                <p className={styles.fareRow}>Seattle to Bremerton: <strong>$13.00</strong></p>
-              </article>
-            </div>
-            <p className={styles.faresMeta}>
-              Adult passenger fares from official WSDOT and Kitsap Transit fare pages.
-            </p>
-          </section>
-
           <div className={styles.controls}>
             <DirectionToggle direction={direction} onChange={setDirection} />
             <div className={styles.legend}>
@@ -98,6 +79,25 @@ function App() {
             Schedule generated {new Date(scheduleData.generated).toLocaleDateString()} ·
             Starts {new Date(scheduleData.weekStart + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
           </div>
+
+          <section className={styles.fares} aria-label="Passenger fares">
+            <h2 className={styles.faresTitle}>Passenger fares</h2>
+            <div className={styles.faresGrid}>
+              <article className={styles.fareCard}>
+                <h3 className={styles.fareCardTitle}>WSF (car ferry)</h3>
+                <p className={styles.fareRow}>Bremerton to Seattle: <strong>No charge</strong></p>
+                <p className={styles.fareRow}>Seattle to Bremerton: <strong>$11.05</strong></p>
+              </article>
+              <article className={styles.fareCard}>
+                <h3 className={styles.fareCardTitle}>Kitsap Fast Ferry</h3>
+                <p className={styles.fareRow}>Bremerton to Seattle: <strong>$2.00</strong></p>
+                <p className={styles.fareRow}>Seattle to Bremerton: <strong>$13.00</strong></p>
+              </article>
+            </div>
+            <p className={styles.faresMeta}>
+              Adult passenger fares from official WSDOT and Kitsap Transit fare pages.
+            </p>
+          </section>
         </>
       ) : (
         <div className={styles.error}>{error ?? 'Schedule data is unavailable.'}</div>

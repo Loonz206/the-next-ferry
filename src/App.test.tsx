@@ -76,7 +76,7 @@ describe('App', () => {
     expect(wsdotLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
-  it('renders passenger fares above controls', () => {
+  it('renders passenger fares below schedule controls', () => {
     mockUseSchedule.mockReturnValue({
       schedule: cloneSchedule(),
       loading: false,
@@ -85,7 +85,14 @@ describe('App', () => {
 
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: /Passenger fares/i })).toBeInTheDocument();
+    const faresHeading = screen.getByRole('heading', { name: /Passenger fares/i });
+    const eastboundToggle = screen.getByRole('button', { name: /Bremerton → Seattle/i });
+
+    expect(faresHeading).toBeInTheDocument();
+    expect(
+      eastboundToggle.compareDocumentPosition(faresHeading)
+      & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
     expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
       /Bremerton to Seattle:\s*No charge/i,
     );
