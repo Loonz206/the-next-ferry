@@ -33,6 +33,16 @@ jobs:
 
       - run: npm ci
 
+      - name: Validate WSDOT API key
+        run: |
+          if [ -z "${WSDOT_API_KEY}" ]; then
+            echo "WSDOT_API_KEY secret is required."
+            echo "Add it in Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+        env:
+          WSDOT_API_KEY: ${{ secrets.WSDOT_API_KEY }}
+
       - name: Fetch schedule data
         run: npx tsx scripts/fetch-schedule.ts
         env:

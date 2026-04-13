@@ -21,7 +21,7 @@ On mobile you see a day-at-a-time view with a day selector strip. On desktop (â‰
 
 ## Data freshness
 
-Schedule data is fetched daily via a GitHub Actions cron job and committed as `public/data/schedule.json`. WSF data comes from the [WSDOT Ferries REST API](https://www.wsdot.wa.gov/ferries/api/schedule/documentation/). Fast ferry data is a hardcoded fallback from the published Kitsap Transit schedule (updated manually when the schedule changes).
+Schedule data is fetched daily via a GitHub Actions cron job and committed as `public/data/schedule.json`. WSF data comes from the [WSDOT Ferries REST API](https://www.wsdot.wa.gov/ferries/api/schedule/documentation/) and requires a valid API key to generate slow-ferry schedule output. Fast ferry data uses a static schedule derived from published Kitsap Transit service times (updated manually when the schedule changes).
 
 ## Local development
 
@@ -55,15 +55,23 @@ Coverage thresholds are enforced globally and per file at 80%+ for statements, b
 Requires a free [WSDOT API key](https://wsdot.wa.gov/traffic/api/).
 
 ```bash
-# Using an env var
-WSDOT_API_KEY=your_key npx tsx scripts/fetch-schedule.ts
+# 1) Create a local .env file from the example
+cp .env.example .env
 
-# Or store it in ~/.zshrc / ~/.zshenv
+# 2) Add your key in .env
+# WSDOT_API_KEY=your_key
+
+# 3) Load .env into your shell for this command and run fetch
+set -a && source .env && set +a && npx tsx scripts/fetch-schedule.ts
+
+# Optional: export once in your shell profile instead
 export WSDOT_API_KEY=your_key
 npx tsx scripts/fetch-schedule.ts
 ```
 
-Without a key the script falls back to the hardcoded fast ferry data + whatever is already in `public/data/schedule.json`.
+The script fails fast if `WSDOT_API_KEY` is missing or WSDOT data cannot be parsed for the requested week.
+
+Do not commit secrets. Keep `.env` local only.
 
 ## Deployment
 
