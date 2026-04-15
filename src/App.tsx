@@ -45,11 +45,11 @@ function App() {
             <div className={styles.legend}>
               <span className={styles.legendItem}>
                 <span className={`${styles.legendDot} ${styles.fast}`} />{' '}
-                Fast Ferry (~30 min, passengers)
+                Kitsap Fast Ferry (~30 min, passengers)
               </span>
               <span className={styles.legendItem}>
                 <span className={`${styles.legendDot} ${styles.slow}`} />{' '}
-                WSF (~60 min, cars + passengers)
+                WSF — Washington State Ferries (~60 min, cars + passengers)
               </span>
             </div>
           </div>
