@@ -76,6 +76,20 @@ describe('App', () => {
     expect(wsdotLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
+  it('renders legend with expanded WSF and Kitsap Fast Ferry terms', () => {
+    mockUseSchedule.mockReturnValue({
+      schedule: cloneSchedule(),
+      loading: false,
+      error: null,
+    });
+
+    render(<App />);
+
+    expect(screen.getAllByText(/Kitsap Fast Ferry/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/Kitsap Fast Ferry.*~30 min/i)).toBeInTheDocument();
+    expect(screen.getByText(/WSF\s*—\s*Washington State Ferries/i)).toBeInTheDocument();
+  });
+
   it('renders passenger fares below schedule controls', () => {
     mockUseSchedule.mockReturnValue({
       schedule: cloneSchedule(),
@@ -99,10 +113,10 @@ describe('App', () => {
     expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
       /Seattle to Bremerton:\s*\$11\.05/i,
     );
-    expect(screen.getByText(/Kitsap Fast Ferry/i).closest('article')).toHaveTextContent(
+    expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Bremerton to Seattle:\s*\$2\.00/i,
     );
-    expect(screen.getByText(/Kitsap Fast Ferry/i).closest('article')).toHaveTextContent(
+    expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Seattle to Bremerton:\s*\$13\.00/i,
     );
   });
