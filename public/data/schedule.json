@@ -1,603 +1,7 @@
 {
-  "weekStart": "2026-04-14",
-  "generated": "2026-04-14T11:37:27.857Z",
+  "weekStart": "2026-04-15",
+  "generated": "2026-04-15T11:34:19.643Z",
   "days": [
-    {
-      "date": "2026-04-14",
-      "dayOfWeek": "Tuesday",
-      "departures": [
-        {
-          "time": "06:05",
-          "arrivalTime": "07:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:35",
-          "arrivalTime": "08:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:35",
-          "arrivalTime": "09:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "10:00",
-          "arrivalTime": "11:00",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "14:50",
-          "arrivalTime": "15:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:45",
-          "arrivalTime": "19:45",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:50",
-          "arrivalTime": "20:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:05",
-          "arrivalTime": "22:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "22:30",
-          "arrivalTime": "23:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:50",
-          "arrivalTime": "01:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "04:50",
-          "arrivalTime": "05:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "06:20",
-          "arrivalTime": "07:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:20",
-          "arrivalTime": "08:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:45",
-          "arrivalTime": "09:45",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "09:50",
-          "arrivalTime": "10:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "15:00",
-          "arrivalTime": "16:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:40",
-          "arrivalTime": "19:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:55",
-          "arrivalTime": "20:55",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:00",
-          "arrivalTime": "22:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "23:40",
-          "arrivalTime": "00:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "04:40",
-          "arrivalTime": "05:10",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "05:25",
-          "arrivalTime": "05:55",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "06:05",
-          "arrivalTime": "06:35",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "06:45",
-          "arrivalTime": "07:15",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "07:25",
-          "arrivalTime": "07:55",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "08:05",
-          "arrivalTime": "08:35",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "08:35",
-          "arrivalTime": "09:05",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "09:15",
-          "arrivalTime": "09:45",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "09:50",
-          "arrivalTime": "10:20",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "10:25",
-          "arrivalTime": "10:55",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "13:50",
-          "arrivalTime": "14:20",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "15:05",
-          "arrivalTime": "15:35",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "15:45",
-          "arrivalTime": "16:15",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "16:25",
-          "arrivalTime": "16:55",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "17:00",
-          "arrivalTime": "17:30",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "17:45",
-          "arrivalTime": "18:15",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "18:20",
-          "arrivalTime": "18:50",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "19:05",
-          "arrivalTime": "19:35",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "19:40",
-          "arrivalTime": "20:10",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "21:00",
-          "arrivalTime": "21:30",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "05:20",
-          "arrivalTime": "05:50",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "06:05",
-          "arrivalTime": "06:35",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "06:45",
-          "arrivalTime": "07:15",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "07:25",
-          "arrivalTime": "07:55",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "08:00",
-          "arrivalTime": "08:30",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "08:40",
-          "arrivalTime": "09:10",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "09:10",
-          "arrivalTime": "09:40",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "09:50",
-          "arrivalTime": "10:20",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "10:25",
-          "arrivalTime": "10:55",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "11:00",
-          "arrivalTime": "11:30",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "14:25",
-          "arrivalTime": "14:55",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "15:45",
-          "arrivalTime": "16:15",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "16:25",
-          "arrivalTime": "16:55",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "17:05",
-          "arrivalTime": "17:35",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "17:40",
-          "arrivalTime": "18:10",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "18:25",
-          "arrivalTime": "18:55",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "19:00",
-          "arrivalTime": "19:30",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "19:40",
-          "arrivalTime": "20:10",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "20:20",
-          "arrivalTime": "20:50",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        },
-        {
-          "time": "21:40",
-          "arrivalTime": "22:10",
-          "direction": "westbound",
-          "type": "fast",
-          "available": true,
-          "crossingMinutes": 30
-        }
-      ]
-    },
     {
       "date": "2026-04-15",
       "dayOfWeek": "Wednesday",
@@ -2977,6 +2381,602 @@
     {
       "date": "2026-04-20",
       "dayOfWeek": "Monday",
+      "departures": [
+        {
+          "time": "06:05",
+          "arrivalTime": "07:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:35",
+          "arrivalTime": "08:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:35",
+          "arrivalTime": "09:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "10:00",
+          "arrivalTime": "11:00",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "14:50",
+          "arrivalTime": "15:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:45",
+          "arrivalTime": "19:45",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:50",
+          "arrivalTime": "20:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:05",
+          "arrivalTime": "22:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "22:30",
+          "arrivalTime": "23:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:50",
+          "arrivalTime": "01:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "04:50",
+          "arrivalTime": "05:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "06:20",
+          "arrivalTime": "07:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:20",
+          "arrivalTime": "08:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:45",
+          "arrivalTime": "09:45",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "09:50",
+          "arrivalTime": "10:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "15:00",
+          "arrivalTime": "16:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:40",
+          "arrivalTime": "19:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:55",
+          "arrivalTime": "20:55",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:00",
+          "arrivalTime": "22:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "23:40",
+          "arrivalTime": "00:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "04:40",
+          "arrivalTime": "05:10",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "05:25",
+          "arrivalTime": "05:55",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "06:05",
+          "arrivalTime": "06:35",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "06:45",
+          "arrivalTime": "07:15",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "07:25",
+          "arrivalTime": "07:55",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "08:05",
+          "arrivalTime": "08:35",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "08:35",
+          "arrivalTime": "09:05",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "09:15",
+          "arrivalTime": "09:45",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "09:50",
+          "arrivalTime": "10:20",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "10:25",
+          "arrivalTime": "10:55",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "13:50",
+          "arrivalTime": "14:20",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "15:05",
+          "arrivalTime": "15:35",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "15:45",
+          "arrivalTime": "16:15",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "16:25",
+          "arrivalTime": "16:55",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "17:00",
+          "arrivalTime": "17:30",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "17:45",
+          "arrivalTime": "18:15",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "18:20",
+          "arrivalTime": "18:50",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "19:05",
+          "arrivalTime": "19:35",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "19:40",
+          "arrivalTime": "20:10",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "21:00",
+          "arrivalTime": "21:30",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "05:20",
+          "arrivalTime": "05:50",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "06:05",
+          "arrivalTime": "06:35",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "06:45",
+          "arrivalTime": "07:15",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "07:25",
+          "arrivalTime": "07:55",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "08:00",
+          "arrivalTime": "08:30",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "08:40",
+          "arrivalTime": "09:10",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "09:10",
+          "arrivalTime": "09:40",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "09:50",
+          "arrivalTime": "10:20",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "10:25",
+          "arrivalTime": "10:55",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "11:00",
+          "arrivalTime": "11:30",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "14:25",
+          "arrivalTime": "14:55",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "15:45",
+          "arrivalTime": "16:15",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "16:25",
+          "arrivalTime": "16:55",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "17:05",
+          "arrivalTime": "17:35",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "17:40",
+          "arrivalTime": "18:10",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "18:25",
+          "arrivalTime": "18:55",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "19:00",
+          "arrivalTime": "19:30",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "19:40",
+          "arrivalTime": "20:10",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "20:20",
+          "arrivalTime": "20:50",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        },
+        {
+          "time": "21:40",
+          "arrivalTime": "22:10",
+          "direction": "westbound",
+          "type": "fast",
+          "available": true,
+          "crossingMinutes": 30
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "dayOfWeek": "Tuesday",
       "departures": [
         {
           "time": "06:05",
