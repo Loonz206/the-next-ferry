@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 import { cloneSchedule } from './test/fixtures/schedule';
 import * as scheduleHooks from './hooks/useSchedule';
+import * as weatherHooks from './hooks/useWeather';
 
 jest.mock('./hooks/useSchedule', () => {
   const actual = jest.requireActual('./hooks/useSchedule');
@@ -13,12 +14,19 @@ jest.mock('./hooks/useSchedule', () => {
   };
 });
 
+jest.mock('./hooks/useWeather', () => ({
+  ...jest.requireActual('./hooks/useWeather'),
+  useWeather: jest.fn(),
+}));
+
 describe('App', () => {
   const mockUseSchedule = scheduleHooks.useSchedule as jest.MockedFunction<typeof scheduleHooks.useSchedule>;
   const mockGetTodayDate = scheduleHooks.getTodayDate as jest.MockedFunction<typeof scheduleHooks.getTodayDate>;
+  const mockUseWeather = weatherHooks.useWeather as jest.MockedFunction<typeof weatherHooks.useWeather>;
 
   beforeEach(() => {
     mockGetTodayDate.mockReturnValue('2026-04-06');
+    mockUseWeather.mockReturnValue({ seattle: null, bremerton: null, loading: false, error: null });
   });
 
   afterEach(() => {
