@@ -36,7 +36,7 @@ export function WeatherWidget() {
     );
   }
 
-  if (error ?? (!seattle && !bremerton)) {
+  if (error || (!seattle && !bremerton)) {
     return null;
   }
 

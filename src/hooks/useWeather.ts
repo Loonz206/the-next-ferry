@@ -16,34 +16,27 @@ export interface WeatherState {
   error: string | null;
 }
 
-// WMO Weather interpretation codes
+// WMO Weather interpretation codes with explicit min/max code ranges.
 // https://open-meteo.com/en/docs#weathervariables
-const WMO_CODE_MAP: Array<{ maxCode: number; description: string; icon: string }> = [
-  { maxCode: 0,  description: 'Clear sky',     icon: '☀️'  },
-  { maxCode: 1,  description: 'Mainly clear',  icon: '🌤️' },
-  { maxCode: 2,  description: 'Partly cloudy', icon: '⛅'  },
-  { maxCode: 3,  description: 'Overcast',      icon: '☁️'  },
-  { maxCode: 48, description: 'Foggy',         icon: '🌫️' },
-  { maxCode: 55, description: 'Drizzle',       icon: '🌦️' },
-  { maxCode: 65, description: 'Rain',          icon: '🌧️' },
-  { maxCode: 77, description: 'Snow',          icon: '🌨️' },
-  { maxCode: 82, description: 'Rain showers',  icon: '🌦️' },
-  { maxCode: 86, description: 'Snow showers',  icon: '🌨️' },
-  { maxCode: 99, description: 'Thunderstorm',  icon: '⛈️' },
+const WMO_CODE_RANGES: Array<{ min: number; max: number; description: string; icon: string }> = [
+  { min: 0,  max: 0,  description: 'Clear sky',     icon: '☀️'  },
+  { min: 1,  max: 1,  description: 'Mainly clear',  icon: '🌤️' },
+  { min: 2,  max: 2,  description: 'Partly cloudy', icon: '⛅'  },
+  { min: 3,  max: 3,  description: 'Overcast',      icon: '☁️'  },
+  { min: 45, max: 48, description: 'Foggy',         icon: '🌫️' },
+  { min: 51, max: 55, description: 'Drizzle',       icon: '🌦️' },
+  { min: 61, max: 65, description: 'Rain',          icon: '🌧️' },
+  { min: 71, max: 77, description: 'Snow',          icon: '🌨️' },
+  { min: 80, max: 82, description: 'Rain showers',  icon: '🌦️' },
+  { min: 85, max: 86, description: 'Snow showers',  icon: '🌨️' },
+  { min: 95, max: 99, description: 'Thunderstorm',  icon: '⛈️' },
 ];
 
 function interpretWeatherCode(code: number): { description: string; icon: string } {
-  // Codes 45–48 are fog; 51–55 drizzle starts at 51, etc. Map by upper-bound of each range.
-  const thresholds: Record<number, { description: string; icon: string }> = {
-    0: { description: 'Clear sky', icon: '☀️' },
-    1: { description: 'Mainly clear', icon: '🌤️' },
-    2: { description: 'Partly cloudy', icon: '⛅' },
-    3: { description: 'Overcast', icon: '☁️' },
-  };
-  if (thresholds[code]) return thresholds[code];
-
-  const entry = WMO_CODE_MAP.find(e => code <= e.maxCode && code >= (e.maxCode - 10));
-  return entry ?? { description: 'Unknown', icon: '🌡️' };
+  const entry = WMO_CODE_RANGES.find(r => code >= r.min && code <= r.max);
+  if (!entry) return { description: 'Unknown', icon: '🌡️' };
+  const { description, icon } = entry;
+  return { description, icon };
 }
 
 // Fetches weather from Open-Meteo — free, no API key required.
@@ -113,7 +106,7 @@ export function useWeather(): WeatherState {
       })
       .catch(err => {
         if (!cancelled) {
-          setState({ seattle: null, bremerton: null, loading: false, error: String(err.message) });
+          setState({ seattle: null, bremerton: null, loading: false, error: err instanceof Error ? err.message : String(err) });
         }
       });
 
