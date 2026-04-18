@@ -5,6 +5,7 @@ import { DirectionToggle } from './components/DirectionToggle';
 import { DaySelector } from './components/DaySelector';
 import { DayView } from './components/DayView';
 import { WeeklyCalendar } from './components/WeeklyCalendar';
+import { WeatherWidget } from './components/WeatherWidget';
 import styles from './App.module.css';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <p className={styles.subtitle}>
           Bremerton ↔ Seattle — Fast Ferry &amp; WSF combined schedule
         </p>
+        <WeatherWidget />
       </header>
 
       {scheduleData ? (
