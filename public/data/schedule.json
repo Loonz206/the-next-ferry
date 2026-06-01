@@ -1,204 +1,18 @@
 {
-  "weekStart": "2026-05-31",
-  "generated": "2026-05-31T11:08:59.929Z",
+  "weekStart": "2026-06-01",
+  "generated": "2026-06-01T12:24:39.018Z",
   "days": [
-    {
-      "date": "2026-05-31",
-      "dayOfWeek": "Sunday",
-      "departures": [
-        {
-          "time": "07:35",
-          "arrivalTime": "08:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "10:00",
-          "arrivalTime": "11:00",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "14:50",
-          "arrivalTime": "15:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:50",
-          "arrivalTime": "20:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "22:30",
-          "arrivalTime": "23:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:50",
-          "arrivalTime": "01:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "06:20",
-          "arrivalTime": "07:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:45",
-          "arrivalTime": "09:45",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:40",
-          "arrivalTime": "19:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:00",
-          "arrivalTime": "22:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "23:40",
-          "arrivalTime": "00:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:00",
-          "arrivalTime": "00:00",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": false,
-          "crossingMinutes": 30,
-          "unavailableReason": "No Sunday fast ferry service"
-        },
-        {
-          "time": "00:00",
-          "arrivalTime": "00:00",
-          "direction": "westbound",
-          "type": "fast",
-          "available": false,
-          "crossingMinutes": 30,
-          "unavailableReason": "No Sunday fast ferry service"
-        }
-      ]
-    },
     {
       "date": "2026-06-01",
       "dayOfWeek": "Monday",
       "departures": [
         {
-          "time": "06:05",
-          "arrivalTime": "07:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "07:35",
           "arrivalTime": "08:35",
           "direction": "westbound",
           "type": "slow",
           "available": true,
           "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:35",
-          "arrivalTime": "09:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
           "crossingMinutes": 60
         },
         {
@@ -211,30 +25,12 @@
           "crossingMinutes": 60
         },
         {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "12:20",
           "arrivalTime": "13:20",
           "direction": "westbound",
           "type": "slow",
           "available": true,
           "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
           "crossingMinutes": 60
         },
         {
@@ -247,15 +43,6 @@
           "crossingMinutes": 60
         },
         {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "17:30",
           "arrivalTime": "18:30",
           "direction": "westbound",
@@ -265,30 +52,12 @@
           "crossingMinutes": 60
         },
         {
-          "time": "18:45",
-          "arrivalTime": "19:45",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "19:50",
           "arrivalTime": "20:50",
           "direction": "westbound",
           "type": "slow",
           "available": true,
           "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:05",
-          "arrivalTime": "22:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
           "crossingMinutes": 60
         },
         {
@@ -310,30 +79,12 @@
           "crossingMinutes": 60
         },
         {
-          "time": "04:50",
-          "arrivalTime": "05:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "06:20",
           "arrivalTime": "07:20",
           "direction": "eastbound",
           "type": "slow",
           "available": true,
           "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:20",
-          "arrivalTime": "08:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
           "crossingMinutes": 60
         },
         {
@@ -346,30 +97,12 @@
           "crossingMinutes": 60
         },
         {
-          "time": "09:50",
-          "arrivalTime": "10:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "11:10",
           "arrivalTime": "12:10",
           "direction": "eastbound",
           "type": "slow",
           "available": true,
           "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
           "crossingMinutes": 60
         },
         {
@@ -382,15 +115,6 @@
           "crossingMinutes": 60
         },
         {
-          "time": "15:00",
-          "arrivalTime": "16:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "16:15",
           "arrivalTime": "17:15",
           "direction": "eastbound",
@@ -400,30 +124,12 @@
           "crossingMinutes": 60
         },
         {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
-          "crossingMinutes": 60
-        },
-        {
           "time": "18:40",
           "arrivalTime": "19:40",
           "direction": "eastbound",
           "type": "slow",
           "available": true,
           "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:55",
-          "arrivalTime": "20:55",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Walla Walla",
           "crossingMinutes": 60
         },
         {
@@ -3441,6 +3147,300 @@
           "available": false,
           "crossingMinutes": 30,
           "unavailableReason": "Saturday fast ferry schedule is not configured in scripts/fast-ferry-fallback.json."
+        }
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "dayOfWeek": "Sunday",
+      "departures": [
+        {
+          "time": "06:05",
+          "arrivalTime": "07:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:35",
+          "arrivalTime": "08:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:35",
+          "arrivalTime": "09:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "10:00",
+          "arrivalTime": "11:00",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "14:50",
+          "arrivalTime": "15:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:45",
+          "arrivalTime": "19:45",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:50",
+          "arrivalTime": "20:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:05",
+          "arrivalTime": "22:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "22:30",
+          "arrivalTime": "23:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:50",
+          "arrivalTime": "01:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "04:50",
+          "arrivalTime": "05:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "06:20",
+          "arrivalTime": "07:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:20",
+          "arrivalTime": "08:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:45",
+          "arrivalTime": "09:45",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "09:50",
+          "arrivalTime": "10:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "15:00",
+          "arrivalTime": "16:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:40",
+          "arrivalTime": "19:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:55",
+          "arrivalTime": "20:55",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Walla Walla",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:00",
+          "arrivalTime": "22:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "23:40",
+          "arrivalTime": "00:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:00",
+          "arrivalTime": "00:00",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": false,
+          "crossingMinutes": 30,
+          "unavailableReason": "No Sunday fast ferry service"
+        },
+        {
+          "time": "00:00",
+          "arrivalTime": "00:00",
+          "direction": "westbound",
+          "type": "fast",
+          "available": false,
+          "crossingMinutes": 30,
+          "unavailableReason": "No Sunday fast ferry service"
         }
       ]
     }
