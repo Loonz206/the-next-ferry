@@ -13,20 +13,22 @@ const WSF_SUMMER_SURCHARGE_PERCENT = 35;
 function isInSummerSurchargeWindow(date: Date): boolean {
   const month = date.getMonth() + 1;
   const day = date.getDate();
+  const monthDay = (month * 100) + day;
 
-  if (month < 5 || month > 9) {
-    return false;
+  return monthDay >= 501 && monthDay <= 930;
+}
+
+function parseScheduleDate(dateString: string | null): Date | null {
+  if (!dateString) {
+    return null;
   }
 
-  if (month === 5) {
-    return day >= 1;
+  const [year, month, day] = dateString.split('-').map(Number);
+  if (!year || !month || !day) {
+    return null;
   }
 
-  if (month === 9) {
-    return day <= 30;
-  }
-
-  return true;
+  return new Date(year, month - 1, day, 12, 0, 0);
 }
 
 function App() {
@@ -47,7 +49,7 @@ function App() {
   const currentDay = scheduleData && effectiveDate
     ? getDaySchedule(scheduleData, effectiveDate)
     : null;
-  const fareDate = effectiveDate ? new Date(`${effectiveDate}T12:00:00`) : new Date();
+  const fareDate = parseScheduleDate(effectiveDate) ?? new Date();
   const isSummerSurchargeActive = isInSummerSurchargeWindow(fareDate);
 
   return (
