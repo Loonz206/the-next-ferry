@@ -121,11 +121,45 @@ describe('App', () => {
     expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
       /Seattle to Bremerton:\s*\$11\.05/i,
     );
+    expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
+      /Vehicle surcharge \(May 1–Sep 30\):\s*\+35% in season/i,
+    );
     expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Bremerton to Seattle:\s*\$2\.00/i,
     );
     expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Seattle to Bremerton:\s*\$13\.00/i,
+    );
+    expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
+      /Summer surcharge:\s*none/i,
+    );
+    expect(screen.getByRole('link', { name: /Seattle → Bremerton fares/i })).toHaveAttribute(
+      'href',
+      'https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=7&arrivingterm=4',
+    );
+    expect(screen.getByRole('link', { name: /Kitsap Transit fares/i })).toHaveAttribute(
+      'href',
+      'https://www.kitsaptransit.com/fares/fares',
+    );
+  });
+
+  it('marks WSF summer surcharge as active in peak months', () => {
+    const schedule = cloneSchedule();
+    schedule.weekStart = '2026-07-06';
+    schedule.days[0].date = '2026-07-06';
+    schedule.days[1].date = '2026-07-07';
+
+    mockGetTodayDate.mockReturnValue('2026-07-06');
+    mockUseSchedule.mockReturnValue({
+      schedule,
+      loading: false,
+      error: null,
+    });
+
+    render(<App />);
+
+    expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
+      /Vehicle surcharge \(May 1–Sep 30\):\s*\+35% active/i,
     );
   });
 
