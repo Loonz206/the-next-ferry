@@ -122,7 +122,7 @@ describe('App', () => {
       /Seattle to Bremerton:\s*\$11\.05/i,
     );
     expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
-      /Vehicle surcharge \(May 1–Sep 30\):\s*\+35% in season/i,
+      /Vehicle surcharge \(May 1–Sep 30\):\s*\+35% inactive/i,
     );
     expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Bremerton to Seattle:\s*\$2\.00/i,

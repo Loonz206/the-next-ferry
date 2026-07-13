@@ -51,7 +51,7 @@ function App() {
     : null;
   const fareDate = parseScheduleDate(effectiveDate) ?? new Date();
   const isSummerSurchargeActive = isInSummerSurchargeWindow(fareDate);
-  const wsfSurchargeStatus = isSummerSurchargeActive ? 'active' : 'in season';
+  const wsfSurchargeStatus = isSummerSurchargeActive ? 'active' : 'inactive';
 
   return (
     <div className={styles.app}>
