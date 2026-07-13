@@ -163,6 +163,31 @@ describe('App', () => {
     );
   });
 
+  it('handles WSF surcharge boundary dates', () => {
+    const renderWithDate = (date: string): string => {
+      const schedule = cloneSchedule();
+      schedule.weekStart = date;
+      schedule.days[0].date = date;
+
+      mockGetTodayDate.mockReturnValue(date);
+      mockUseSchedule.mockReturnValue({
+        schedule,
+        loading: false,
+        error: null,
+      });
+
+      const { unmount } = render(<App />);
+      const text = screen.getByText(/WSF \(car ferry\)/i).closest('article')?.textContent ?? '';
+      unmount();
+      return text;
+    };
+
+    expect(renderWithDate('2026-04-30')).toMatch(/\+35% inactive/i);
+    expect(renderWithDate('2026-05-01')).toMatch(/\+35% active/i);
+    expect(renderWithDate('2026-09-30')).toMatch(/\+35% active/i);
+    expect(renderWithDate('2026-10-01')).toMatch(/\+35% inactive/i);
+  });
+
   it('falls back to first schedule day when today is not in week', () => {
     const schedule = cloneSchedule();
     schedule.days[0].departures = [
