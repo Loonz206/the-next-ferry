@@ -51,6 +51,7 @@ function App() {
     : null;
   const fareDate = parseScheduleDate(effectiveDate) ?? new Date();
   const isSummerSurchargeActive = isInSummerSurchargeWindow(fareDate);
+  const wsfSurchargeStatus = isSummerSurchargeActive ? 'active' : 'in season';
 
   return (
     <div className={styles.app}>
@@ -116,7 +117,7 @@ function App() {
                 <p className={styles.fareRow}>Seattle to Bremerton: <strong>$11.05</strong></p>
                 <p className={styles.fareRow}>
                   Vehicle surcharge (May 1–Sep 30):{' '}
-                  <strong>{isSummerSurchargeActive ? `+${WSF_SUMMER_SURCHARGE_PERCENT}% active` : `+${WSF_SUMMER_SURCHARGE_PERCENT}% in season`}</strong>
+                  <strong>{`+${WSF_SUMMER_SURCHARGE_PERCENT}% ${wsfSurchargeStatus}`}</strong>
                 </p>
               </article>
               <article className={styles.fareCard}>
