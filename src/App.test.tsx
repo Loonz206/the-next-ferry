@@ -121,12 +121,71 @@ describe('App', () => {
     expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
       /Seattle to Bremerton:\s*\$11\.05/i,
     );
+    expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
+      /Vehicle surcharge \(May 1–Sep 30\):\s*\+35% inactive/i,
+    );
     expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Bremerton to Seattle:\s*\$2\.00/i,
     );
     expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
       /Seattle to Bremerton:\s*\$13\.00/i,
     );
+    expect(screen.getByRole('heading', { name: /Kitsap Fast Ferry/i }).closest('article')).toHaveTextContent(
+      /Summer surcharge:\s*none/i,
+    );
+    expect(screen.getByRole('link', { name: /Seattle → Bremerton fares/i })).toHaveAttribute(
+      'href',
+      'https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=7&arrivingterm=4',
+    );
+    expect(screen.getByRole('link', { name: /Kitsap Transit fares/i })).toHaveAttribute(
+      'href',
+      'https://www.kitsaptransit.com/fares/fares',
+    );
+  });
+
+  it('marks WSF summer surcharge as active in peak months', () => {
+    const schedule = cloneSchedule();
+    schedule.weekStart = '2026-07-06';
+    schedule.days[0].date = '2026-07-06';
+    schedule.days[1].date = '2026-07-07';
+
+    mockGetTodayDate.mockReturnValue('2026-07-06');
+    mockUseSchedule.mockReturnValue({
+      schedule,
+      loading: false,
+      error: null,
+    });
+
+    render(<App />);
+
+    expect(screen.getByText(/WSF \(car ferry\)/i).closest('article')).toHaveTextContent(
+      /Vehicle surcharge \(May 1–Sep 30\):\s*\+35% active/i,
+    );
+  });
+
+  it('handles WSF surcharge boundary dates', () => {
+    const renderWithDate = (date: string): string => {
+      const schedule = cloneSchedule();
+      schedule.weekStart = date;
+      schedule.days[0].date = date;
+
+      mockGetTodayDate.mockReturnValue(date);
+      mockUseSchedule.mockReturnValue({
+        schedule,
+        loading: false,
+        error: null,
+      });
+
+      const { unmount } = render(<App />);
+      const text = screen.getByText(/WSF \(car ferry\)/i).closest('article')?.textContent ?? '';
+      unmount();
+      return text;
+    };
+
+    expect(renderWithDate('2026-04-30')).toMatch(/\+35% inactive/i);
+    expect(renderWithDate('2026-05-01')).toMatch(/\+35% active/i);
+    expect(renderWithDate('2026-09-30')).toMatch(/\+35% active/i);
+    expect(renderWithDate('2026-10-01')).toMatch(/\+35% inactive/i);
   });
 
   it('falls back to first schedule day when today is not in week', () => {

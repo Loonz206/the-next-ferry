@@ -26,6 +26,10 @@ Passenger fares are shown above the direction filter so you can compare typical 
 - Kitsap Fast Ferry (Seattle to Bremerton): $13.00
 - Kitsap Fast Ferry (Bremerton to Seattle): $2.00
 
+The fare panel also includes summer surcharge context:
+- WSF vehicle fares have a seasonal surcharge window (May 1–Sep 30), while walk-on passenger fare remains unchanged.
+- Kitsap Fast Ferry does not publish a summer surcharge for passenger fares.
+
 ## Schedule data flow
 
 The app always renders the checked-in `public/data/schedule.json` file at runtime.

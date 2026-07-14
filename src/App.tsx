@@ -8,6 +8,50 @@ import { WeeklyCalendar } from './components/WeeklyCalendar';
 import { WeatherWidget } from './components/WeatherWidget';
 import styles from './App.module.css';
 
+const WSF_SUMMER_SURCHARGE_PERCENT = 35;
+
+function isInSummerSurchargeWindow(date: Date): boolean {
+  if (Number.isNaN(date.getTime())) {
+    return false;
+  }
+
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const monthDay = (month * 100) + day;
+
+  return monthDay >= 501 && monthDay <= 930;
+}
+
+function parseScheduleDate(dateString: string | null): Date | null {
+  if (!dateString) {
+    return null;
+  }
+
+  const [year, month, day] = dateString.split('-').map(Number);
+  if (
+    !Number.isInteger(year)
+    || !Number.isInteger(month)
+    || !Number.isInteger(day)
+    || month < 1
+    || month > 12
+    || day < 1
+    || day > 31
+  ) {
+    return null;
+  }
+
+  const parsed = new Date(year, month - 1, day, 12, 0, 0);
+  if (
+    parsed.getFullYear() !== year
+    || parsed.getMonth() !== month - 1
+    || parsed.getDate() !== day
+  ) {
+    return null;
+  }
+
+  return parsed;
+}
+
 function App() {
   const { schedule, loading, error } = useSchedule();
   const [direction, setDirection] = useState<Direction>('eastbound');
@@ -26,6 +70,9 @@ function App() {
   const currentDay = scheduleData && effectiveDate
     ? getDaySchedule(scheduleData, effectiveDate)
     : null;
+  const fareDate = parseScheduleDate(effectiveDate) ?? new Date();
+  const isSummerSurchargeActive = isInSummerSurchargeWindow(fareDate);
+  const wsfSurchargeStatus = isSummerSurchargeActive ? 'active' : 'inactive';
 
   return (
     <div className={styles.app}>
@@ -89,15 +136,30 @@ function App() {
                 <h3 className={styles.fareCardTitle}>WSF (car ferry)</h3>
                 <p className={styles.fareRow}>Bremerton to Seattle: <strong>No charge</strong></p>
                 <p className={styles.fareRow}>Seattle to Bremerton: <strong>$11.05</strong></p>
+                <p className={styles.fareRow}>
+                  Vehicle surcharge (May 1–Sep 30):{' '}
+                  <strong>{`+${WSF_SUMMER_SURCHARGE_PERCENT}% ${wsfSurchargeStatus}`}</strong>
+                </p>
               </article>
               <article className={styles.fareCard}>
                 <h3 className={styles.fareCardTitle}>Kitsap Fast Ferry</h3>
                 <p className={styles.fareRow}>Bremerton to Seattle: <strong>$2.00</strong></p>
                 <p className={styles.fareRow}>Seattle to Bremerton: <strong>$13.00</strong></p>
+                <p className={styles.fareRow}>
+                  Summer surcharge: <strong>none</strong>
+                </p>
               </article>
             </div>
             <p className={styles.faresMeta}>
-              Adult passenger fares from official WSDOT and Kitsap Transit fare pages.
+              Adult passenger fares from official WSDOT and Kitsap Transit fare pages. WSF seasonal
+              vehicle surcharge details:{' '}
+              <a href="https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=7&arrivingterm=4" target="_blank" rel="noopener noreferrer">
+                Seattle → Bremerton fares
+              </a>
+              {' '}·{' '}
+              <a href="https://www.kitsaptransit.com/fares/fares" target="_blank" rel="noopener noreferrer">
+                Kitsap Transit fares
+              </a>
             </p>
           </section>
         </>
