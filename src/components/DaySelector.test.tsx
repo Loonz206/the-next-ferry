@@ -3,8 +3,8 @@ import userEvent from '@testing-library/user-event';
 import { DaySelector } from './DaySelector';
 import type { DaySchedule } from '../types/schedule';
 
-jest.mock('../hooks/useSchedule', () => {
-  const actual = jest.requireActual('../hooks/useSchedule');
+jest.mock('../utils/schedule', () => {
+  const actual = jest.requireActual('../utils/schedule');
   return {
     ...actual,
     getTodayDate: jest.fn(() => '2026-04-07'),

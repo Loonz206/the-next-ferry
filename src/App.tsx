@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import type { Direction } from './types/schedule';
-import { useSchedule, getDaySchedule, getTodayDate } from './hooks/useSchedule';
+import { useSchedule } from './hooks/useSchedule';
+import { getDaySchedule, getTodayDate } from './utils/schedule';
 import { DirectionToggle } from './components/DirectionToggle';
 import { DaySelector } from './components/DaySelector';
 import { DayView } from './components/DayView';
 import { WeeklyCalendar } from './components/WeeklyCalendar';
 import styles from './App.module.css';
 
-function App() {
+export function App() {
   const { schedule, loading, error } = useSchedule();
   const [direction, setDirection] = useState<Direction>('eastbound');
   const [selectedDate, setSelectedDate] = useState<string>(getTodayDate());
@@ -17,11 +18,11 @@ function App() {
   }
 
   const scheduleData = !error && schedule ? schedule : null;
-  const effectiveDate = scheduleData && scheduleData.days.some(d => d.date === selectedDate)
-    ? selectedDate
-    : scheduleData
-      ? scheduleData.days[0].date
-      : null;
+  let effectiveDate: string | null = null;
+  if (scheduleData) {
+    const hasSelectedDate = scheduleData.days.some(d => d.date === selectedDate);
+    effectiveDate = hasSelectedDate ? selectedDate : scheduleData.days[0].date;
+  }
   const currentDay = scheduleData && effectiveDate
     ? getDaySchedule(scheduleData, effectiveDate)
     : null;
@@ -138,5 +139,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

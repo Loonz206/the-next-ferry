@@ -1,5 +1,5 @@
 import type { DaySchedule, Direction } from '../types/schedule';
-import { filterByDirection, groupByTimeOfDay, getNextDeparture, getUnavailableNotices, getTodayDate } from '../hooks/useSchedule';
+import { filterByDirection, groupByTimeOfDay, getNextDeparture, getUnavailableNotices, getTodayDate } from '../utils/schedule';
 import { DepartureCard } from './DepartureCard';
 import styles from './DayView.module.css';
 

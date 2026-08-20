@@ -2,6 +2,8 @@
 
 A single-page app that combines the **Washington State Ferries (WSF) Bremerton route** and the **Kitsap Transit Fast Ferry** into one unified weekly schedule — so you always know what's leaving, when, and whether it's a car ferry or an express passenger boat.
 
+Commuting between Bremerton and Seattle means choosing between two ferry systems with different tradeoffs. The fast ferry is quicker and passenger-only; WSF is slower but carries cars, and the best option can flip by direction. Getting home from Seattle adds another wrinkle, with different return costs depending on the service. This app puts both schedules in one place so you can compare departures, fares, and trip time at a glance.
+
 ## What it does
 
 The Bremerton corridor has two distinct ferry services running between Seattle and Bremerton:

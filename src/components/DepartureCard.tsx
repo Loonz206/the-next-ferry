@@ -1,5 +1,5 @@
 import type { FerryDeparture } from '../types/schedule';
-import { formatTime12h } from '../hooks/useSchedule';
+import { formatTime12h } from '../utils/schedule';
 import styles from './DepartureCard.module.css';
 
 interface DepartureCardProps {
