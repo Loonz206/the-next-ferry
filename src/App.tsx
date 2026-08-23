@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Direction } from './types/schedule';
 import { useSchedule } from './hooks/useSchedule';
+import { useMediaQuery } from './hooks/useMediaQuery';
 import { getDaySchedule, getTodayDate } from './utils/schedule';
 import { DirectionToggle } from './components/DirectionToggle';
 import { DaySelector } from './components/DaySelector';
@@ -12,6 +13,7 @@ export function App() {
   const { schedule, loading, error } = useSchedule();
   const [direction, setDirection] = useState<Direction>('eastbound');
   const [selectedDate, setSelectedDate] = useState<string>(getTodayDate());
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   if (loading) {
     return <div className={styles.loading}>Loading ferry schedule…</div>;
@@ -55,26 +57,24 @@ export function App() {
             </div>
           </div>
 
-          {/* Mobile: day selector + single day view */}
-          <div className={styles.mobileView}>
-            {effectiveDate && (
-              <DaySelector
-                days={scheduleData.days}
-                selectedDate={effectiveDate}
-                onSelect={setSelectedDate}
-              />
-            )}
-            {currentDay && (
-              <div style={{ marginTop: 16 }}>
-                <DayView day={currentDay} direction={direction} />
-              </div>
-            )}
-          </div>
-
-          {/* Desktop: full weekly calendar */}
-          <div className={styles.desktopView}>
+          {isDesktop ? (
             <WeeklyCalendar schedule={scheduleData} direction={direction} />
-          </div>
+          ) : (
+            <>
+              {effectiveDate && (
+                <DaySelector
+                  days={scheduleData.days}
+                  selectedDate={effectiveDate}
+                  onSelect={setSelectedDate}
+                />
+              )}
+              {currentDay && (
+                <div style={{ marginTop: 16 }}>
+                  <DayView day={currentDay} direction={direction} />
+                </div>
+              )}
+            </>
+          )}
 
           <div className={styles.generated}>
             Schedule generated {new Date(scheduleData.generated).toLocaleDateString()} ·

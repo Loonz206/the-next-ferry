@@ -113,14 +113,6 @@
   background: var(--slow-color);
 }
 
-.mobileView {
-  display: block;
-}
-
-.desktopView {
-  display: none;
-}
-
 .loading {
   display: flex;
   align-items: center;
@@ -205,14 +197,6 @@
 
   .faresGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .mobileView {
-    display: none;
-  }
-
-  .desktopView {
-    display: block;
   }
 
   .footer {
