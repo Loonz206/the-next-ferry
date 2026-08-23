@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { WeeklyCalendar } from './WeeklyCalendar';
-import { cloneSchedule } from '../test/fixtures/schedule';
+import { cloneSchedule } from '../test/fixtures/baseSchedule';
 
 describe('WeeklyCalendar', () => {
   afterEach(() => {

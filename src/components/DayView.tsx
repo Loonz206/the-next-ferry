@@ -1,5 +1,6 @@
+import { memo, useMemo } from 'react';
 import type { DaySchedule, Direction } from '../types/schedule';
-import { filterByDirection, groupByTimeOfDay, getNextDeparture, getUnavailableNotices, getTodayDate } from '../hooks/useSchedule';
+import { filterByDirection, groupByTimeOfDay, getNextDeparture, getUnavailableNotices, getTodayDate } from '../utils/schedule';
 import { DepartureCard } from './DepartureCard';
 import styles from './DayView.module.css';
 
@@ -8,12 +9,15 @@ interface DayViewProps {
   readonly direction: Direction;
 }
 
-export function DayView({ day, direction }: Readonly<DayViewProps>) {
-  const directed = filterByDirection(day.departures, direction);
-  const groups = groupByTimeOfDay(directed);
-  const unavailable = getUnavailableNotices(directed);
-  const isToday = day.date === getTodayDate();
-  const nextDep = isToday ? getNextDeparture(directed) : null;
+export const DayView = memo(function DayView({ day, direction }: Readonly<DayViewProps>) {
+  const { groups, unavailable, nextDep } = useMemo(() => {
+    const directed = filterByDirection(day.departures, direction);
+    return {
+      groups: groupByTimeOfDay(directed),
+      unavailable: getUnavailableNotices(directed),
+      nextDep: day.date === getTodayDate() ? getNextDeparture(directed) : null,
+    };
+  }, [day, direction]);
 
   if (groups.length === 0 && unavailable.length === 0) {
     return <div className={styles.noService}>No departures scheduled</div>;
@@ -46,4 +50,4 @@ export function DayView({ day, direction }: Readonly<DayViewProps>) {
       ))}
     </div>
   );
-}
+});

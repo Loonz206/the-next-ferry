@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import type { Direction } from './types/schedule';
-import { useSchedule, getDaySchedule, getTodayDate } from './hooks/useSchedule';
+import { useSchedule } from './hooks/useSchedule';
+import { useMediaQuery } from './hooks/useMediaQuery';
+import { getDaySchedule, getTodayDate } from './utils/schedule';
 import { DirectionToggle } from './components/DirectionToggle';
 import { DaySelector } from './components/DaySelector';
 import { DayView } from './components/DayView';
@@ -8,65 +10,22 @@ import { WeeklyCalendar } from './components/WeeklyCalendar';
 import { WeatherWidget } from './components/WeatherWidget';
 import styles from './App.module.css';
 
-const WSF_SUMMER_SURCHARGE_PERCENT = 35;
-
-function isInSummerSurchargeWindow(date: Date): boolean {
-  if (Number.isNaN(date.getTime())) {
-    return false;
-  }
-
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const monthDay = (month * 100) + day;
-
-  return monthDay >= 501 && monthDay <= 930;
-}
-
-function parseScheduleDate(dateString: string | null): Date | null {
-  if (!dateString) {
-    return null;
-  }
-
-  const [year, month, day] = dateString.split('-').map(Number);
-  if (
-    !Number.isInteger(year)
-    || !Number.isInteger(month)
-    || !Number.isInteger(day)
-    || month < 1
-    || month > 12
-    || day < 1
-    || day > 31
-  ) {
-    return null;
-  }
-
-  const parsed = new Date(year, month - 1, day, 12, 0, 0);
-  if (
-    parsed.getFullYear() !== year
-    || parsed.getMonth() !== month - 1
-    || parsed.getDate() !== day
-  ) {
-    return null;
-  }
-
-  return parsed;
-}
-
-function App() {
+export function App() {
   const { schedule, loading, error } = useSchedule();
   const [direction, setDirection] = useState<Direction>('eastbound');
   const [selectedDate, setSelectedDate] = useState<string>(getTodayDate());
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   if (loading) {
     return <div className={styles.loading}>Loading ferry schedule…</div>;
   }
 
   const scheduleData = !error && schedule ? schedule : null;
-  const effectiveDate = scheduleData && scheduleData.days.some(d => d.date === selectedDate)
-    ? selectedDate
-    : scheduleData
-      ? scheduleData.days[0].date
-      : null;
+  let effectiveDate: string | null = null;
+  if (scheduleData) {
+    const hasSelectedDate = scheduleData.days.some(d => d.date === selectedDate);
+    effectiveDate = hasSelectedDate ? selectedDate : scheduleData.days[0].date;
+  }
   const currentDay = scheduleData && effectiveDate
     ? getDaySchedule(scheduleData, effectiveDate)
     : null;
@@ -103,26 +62,24 @@ function App() {
             </div>
           </div>
 
-          {/* Mobile: day selector + single day view */}
-          <div className={styles.mobileView}>
-            {effectiveDate && (
-              <DaySelector
-                days={scheduleData.days}
-                selectedDate={effectiveDate}
-                onSelect={setSelectedDate}
-              />
-            )}
-            {currentDay && (
-              <div style={{ marginTop: 16 }}>
-                <DayView day={currentDay} direction={direction} />
-              </div>
-            )}
-          </div>
-
-          {/* Desktop: full weekly calendar */}
-          <div className={styles.desktopView}>
+          {isDesktop ? (
             <WeeklyCalendar schedule={scheduleData} direction={direction} />
-          </div>
+          ) : (
+            <>
+              {effectiveDate && (
+                <DaySelector
+                  days={scheduleData.days}
+                  selectedDate={effectiveDate}
+                  onSelect={setSelectedDate}
+                />
+              )}
+              {currentDay && (
+                <div style={{ marginTop: 16 }}>
+                  <DayView day={currentDay} direction={direction} />
+                </div>
+              )}
+            </>
+          )}
 
           <div className={styles.generated}>
             Schedule generated {new Date(scheduleData.generated).toLocaleDateString()} ·
@@ -202,5 +159,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

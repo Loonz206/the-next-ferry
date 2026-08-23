@@ -1,5 +1,6 @@
+import { memo } from 'react';
 import type { FerryDeparture } from '../types/schedule';
-import { formatTime12h } from '../hooks/useSchedule';
+import { formatTime12h } from '../utils/schedule';
 import styles from './DepartureCard.module.css';
 
 interface DepartureCardProps {
@@ -7,7 +8,7 @@ interface DepartureCardProps {
   readonly isNext?: boolean;
 }
 
-export function DepartureCard({ departure, isNext = false }: Readonly<DepartureCardProps>) {
+export const DepartureCard = memo(function DepartureCard({ departure, isNext = false }: Readonly<DepartureCardProps>) {
   const { type, available, time, arrivalTime, vessel, vehicleCapacity, crossingMinutes, unavailableReason } = departure;
 
   if (!available) {
@@ -46,4 +47,4 @@ export function DepartureCard({ departure, isNext = false }: Readonly<DepartureC
       {isNext && <div className={styles.crossing}>NEXT</div>}
     </div>
   );
-}
+});

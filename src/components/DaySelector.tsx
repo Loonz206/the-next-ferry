@@ -1,5 +1,5 @@
 import type { DaySchedule } from '../types/schedule';
-import { getTodayDate } from '../hooks/useSchedule';
+import { getTodayDate } from '../utils/schedule';
 import styles from './DaySelector.module.css';
 
 interface DaySelectorProps {
