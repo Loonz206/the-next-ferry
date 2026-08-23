@@ -1,10 +1,10 @@
 {
-  "weekStart": "2026-04-13",
-  "generated": "2026-04-13T01:17:00.557Z",
+  "weekStart": "2026-08-22",
+  "generated": "2026-08-22T10:39:21.646Z",
   "days": [
     {
-      "date": "2026-04-13",
-      "dayOfWeek": "Monday",
+      "date": "2026-08-22",
+      "dayOfWeek": "Saturday",
       "departures": [
         {
           "time": "06:05",
@@ -12,7 +12,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -21,7 +21,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -30,7 +30,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -39,7 +39,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -48,7 +48,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -57,7 +57,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -66,7 +66,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -75,7 +75,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -84,7 +84,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -93,7 +93,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -102,7 +102,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -111,7 +111,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -120,7 +120,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -129,7 +129,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -138,7 +138,7 @@
           "direction": "westbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -147,7 +147,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -156,7 +156,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -165,7 +165,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -174,7 +174,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -183,7 +183,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -192,7 +192,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -201,7 +201,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -210,7 +210,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -219,7 +219,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -228,7 +228,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -237,7 +237,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -246,7 +246,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -255,7 +255,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Sealth",
+          "vessel": "Kaleetan",
           "crossingMinutes": 60
         },
         {
@@ -264,7 +264,7 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
-          "vessel": "Kaleetan",
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -273,7 +273,595 @@
           "direction": "eastbound",
           "type": "slow",
           "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:00",
+          "arrivalTime": "00:00",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": false,
+          "crossingMinutes": 30,
+          "unavailableReason": "Saturday fast ferry schedule is not configured in scripts/fast-ferry-fallback.json."
+        },
+        {
+          "time": "00:00",
+          "arrivalTime": "00:00",
+          "direction": "westbound",
+          "type": "fast",
+          "available": false,
+          "crossingMinutes": 30,
+          "unavailableReason": "Saturday fast ferry schedule is not configured in scripts/fast-ferry-fallback.json."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "dayOfWeek": "Sunday",
+      "departures": [
+        {
+          "time": "06:05",
+          "arrivalTime": "07:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
           "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:35",
+          "arrivalTime": "08:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:35",
+          "arrivalTime": "09:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "10:00",
+          "arrivalTime": "11:00",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "14:50",
+          "arrivalTime": "15:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:45",
+          "arrivalTime": "19:45",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:50",
+          "arrivalTime": "20:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:05",
+          "arrivalTime": "22:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "22:30",
+          "arrivalTime": "23:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:50",
+          "arrivalTime": "01:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "04:50",
+          "arrivalTime": "05:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "06:20",
+          "arrivalTime": "07:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:20",
+          "arrivalTime": "08:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:45",
+          "arrivalTime": "09:45",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "09:50",
+          "arrivalTime": "10:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "15:00",
+          "arrivalTime": "16:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:40",
+          "arrivalTime": "19:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:55",
+          "arrivalTime": "20:55",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:00",
+          "arrivalTime": "22:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "23:40",
+          "arrivalTime": "00:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:00",
+          "arrivalTime": "00:00",
+          "direction": "eastbound",
+          "type": "fast",
+          "available": false,
+          "crossingMinutes": 30,
+          "unavailableReason": "No Sunday fast ferry service"
+        },
+        {
+          "time": "00:00",
+          "arrivalTime": "00:00",
+          "direction": "westbound",
+          "type": "fast",
+          "available": false,
+          "crossingMinutes": 30,
+          "unavailableReason": "No Sunday fast ferry service"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "dayOfWeek": "Monday",
+      "departures": [
+        {
+          "time": "06:05",
+          "arrivalTime": "07:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:35",
+          "arrivalTime": "08:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:35",
+          "arrivalTime": "09:35",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "10:00",
+          "arrivalTime": "11:00",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "14:50",
+          "arrivalTime": "15:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:45",
+          "arrivalTime": "19:45",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:50",
+          "arrivalTime": "20:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:05",
+          "arrivalTime": "22:05",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "22:30",
+          "arrivalTime": "23:30",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "00:50",
+          "arrivalTime": "01:50",
+          "direction": "westbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "04:50",
+          "arrivalTime": "05:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "06:20",
+          "arrivalTime": "07:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "07:20",
+          "arrivalTime": "08:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "08:45",
+          "arrivalTime": "09:45",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "09:50",
+          "arrivalTime": "10:50",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "11:10",
+          "arrivalTime": "12:10",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "12:20",
+          "arrivalTime": "13:20",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "13:30",
+          "arrivalTime": "14:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "15:00",
+          "arrivalTime": "16:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "16:15",
+          "arrivalTime": "17:15",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "17:30",
+          "arrivalTime": "18:30",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "18:40",
+          "arrivalTime": "19:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "19:55",
+          "arrivalTime": "20:55",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Kaleetan",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "21:00",
+          "arrivalTime": "22:00",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
+          "crossingMinutes": 60
+        },
+        {
+          "time": "23:40",
+          "arrivalTime": "00:40",
+          "direction": "eastbound",
+          "type": "slow",
+          "available": true,
+          "vessel": "Chimacum",
           "crossingMinutes": 60
         },
         {
@@ -599,7 +1187,7 @@
       ]
     },
     {
-      "date": "2026-04-14",
+      "date": "2026-08-25",
       "dayOfWeek": "Tuesday",
       "departures": [
         {
@@ -1195,7 +1783,7 @@
       ]
     },
     {
-      "date": "2026-04-15",
+      "date": "2026-08-26",
       "dayOfWeek": "Wednesday",
       "departures": [
         {
@@ -1791,7 +2379,7 @@
       ]
     },
     {
-      "date": "2026-04-16",
+      "date": "2026-08-27",
       "dayOfWeek": "Thursday",
       "departures": [
         {
@@ -2387,7 +2975,7 @@
       ]
     },
     {
-      "date": "2026-04-17",
+      "date": "2026-08-28",
       "dayOfWeek": "Friday",
       "departures": [
         {
@@ -2979,594 +3567,6 @@
           "type": "fast",
           "available": true,
           "crossingMinutes": 30
-        }
-      ]
-    },
-    {
-      "date": "2026-04-18",
-      "dayOfWeek": "Saturday",
-      "departures": [
-        {
-          "time": "06:05",
-          "arrivalTime": "07:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:35",
-          "arrivalTime": "08:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:35",
-          "arrivalTime": "09:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "10:00",
-          "arrivalTime": "11:00",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "14:50",
-          "arrivalTime": "15:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:45",
-          "arrivalTime": "19:45",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:50",
-          "arrivalTime": "20:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:05",
-          "arrivalTime": "22:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "22:30",
-          "arrivalTime": "23:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:50",
-          "arrivalTime": "01:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "04:50",
-          "arrivalTime": "05:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "06:20",
-          "arrivalTime": "07:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:20",
-          "arrivalTime": "08:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:45",
-          "arrivalTime": "09:45",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "09:50",
-          "arrivalTime": "10:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "15:00",
-          "arrivalTime": "16:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:40",
-          "arrivalTime": "19:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:55",
-          "arrivalTime": "20:55",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:00",
-          "arrivalTime": "22:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "23:40",
-          "arrivalTime": "00:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:00",
-          "arrivalTime": "00:00",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": false,
-          "crossingMinutes": 30,
-          "unavailableReason": "Saturday fast ferry runs May–Sep only"
-        },
-        {
-          "time": "00:00",
-          "arrivalTime": "00:00",
-          "direction": "westbound",
-          "type": "fast",
-          "available": false,
-          "crossingMinutes": 30,
-          "unavailableReason": "Saturday fast ferry runs May–Sep only"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-19",
-      "dayOfWeek": "Sunday",
-      "departures": [
-        {
-          "time": "06:05",
-          "arrivalTime": "07:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:35",
-          "arrivalTime": "08:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:35",
-          "arrivalTime": "09:35",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "10:00",
-          "arrivalTime": "11:00",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "14:50",
-          "arrivalTime": "15:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:45",
-          "arrivalTime": "19:45",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:50",
-          "arrivalTime": "20:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:05",
-          "arrivalTime": "22:05",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "22:30",
-          "arrivalTime": "23:30",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:50",
-          "arrivalTime": "01:50",
-          "direction": "westbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "04:50",
-          "arrivalTime": "05:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "06:20",
-          "arrivalTime": "07:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "07:20",
-          "arrivalTime": "08:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "08:45",
-          "arrivalTime": "09:45",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "09:50",
-          "arrivalTime": "10:50",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "11:10",
-          "arrivalTime": "12:10",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "12:20",
-          "arrivalTime": "13:20",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "13:30",
-          "arrivalTime": "14:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "15:00",
-          "arrivalTime": "16:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "16:15",
-          "arrivalTime": "17:15",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "17:30",
-          "arrivalTime": "18:30",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "18:40",
-          "arrivalTime": "19:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "19:55",
-          "arrivalTime": "20:55",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Kaleetan",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "21:00",
-          "arrivalTime": "22:00",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "23:40",
-          "arrivalTime": "00:40",
-          "direction": "eastbound",
-          "type": "slow",
-          "available": true,
-          "vessel": "Chimacum",
-          "crossingMinutes": 60
-        },
-        {
-          "time": "00:00",
-          "arrivalTime": "00:00",
-          "direction": "eastbound",
-          "type": "fast",
-          "available": false,
-          "crossingMinutes": 30,
-          "unavailableReason": "No Sunday fast ferry service"
-        },
-        {
-          "time": "00:00",
-          "arrivalTime": "00:00",
-          "direction": "westbound",
-          "type": "fast",
-          "available": false,
-          "crossingMinutes": 30,
-          "unavailableReason": "No Sunday fast ferry service"
         }
       ]
     }
