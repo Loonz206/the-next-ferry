@@ -70,6 +70,23 @@ export function getTodayDate(): string {
   return `${year}-${month}-${day}`;
 }
 
+export const WSF_SUMMER_SURCHARGE_PERCENT = 35;
+
+// Parses an ISO date string (YYYY-MM-DD) into a local Date, or null if invalid/missing.
+export function parseScheduleDate(date: string | null): Date | null {
+  if (!date) return null;
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
+  if (!match) return null;
+  const [, year, month, day] = match;
+  return new Date(Number(year), Number(month) - 1, Number(day));
+}
+
+// WSF seasonal vehicle surcharge applies May 1 through Sep 30, inclusive.
+export function isInSummerSurchargeWindow(date: Date): boolean {
+  const month = date.getMonth() + 1;
+  return month >= 5 && month <= 9;
+}
+
 export function formatTime12h(time24: string): string {
   const [h, m] = time24.split(':').map(Number);
   const period = h >= 12 ? 'PM' : 'AM';

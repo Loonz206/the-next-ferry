@@ -10,6 +10,8 @@
     "test": "jest --runInBand",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --runInBand",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
     "preview": "vite preview",
     "fetch-schedule": "tsx scripts/fetch-schedule.ts"
   },
@@ -20,6 +22,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.4",
     "@jest/globals": "^30.3.0",
+    "@playwright/test": "^1.62.1",
     "@swc/core": "^1.15.24",
     "@swc/jest": "^0.2.39",
     "@testing-library/jest-dom": "^6.9.1",

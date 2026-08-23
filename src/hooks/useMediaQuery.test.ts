@@ -70,7 +70,7 @@ describe('useMediaQuery', () => {
       ['(min-width: 768px)', first],
       ['(min-width: 1024px)', second],
     ]);
-    window.matchMedia = jest.fn((query: string) => queries.get(query) as MqlMock);
+    window.matchMedia = jest.fn((query: string) => queries.get(query) as unknown as MediaQueryList);
 
     const { result, rerender } = renderHook(({ query }) => useMediaQuery(query), {
       initialProps: { query: '(min-width: 768px)' },

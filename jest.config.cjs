@@ -18,7 +18,8 @@ const config = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
-  coveragePathIgnorePatterns: ['/node_modules/', '/src/test/fixtures/', 'jest.setup.ts'],
+  testPathIgnorePatterns: ['/node_modules/', '/e2e/', '/dist/'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/src/test/fixtures/', 'jest.setup.ts', '/e2e/'],
   coverageThreshold: {
     global: {
       statements: 80,
