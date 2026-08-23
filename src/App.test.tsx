@@ -4,6 +4,7 @@ import { App } from './App';
 import { cloneSchedule } from './test/fixtures/baseSchedule';
 import * as scheduleHooks from './hooks/useSchedule';
 import * as scheduleUtils from './utils/schedule';
+import * as weatherHooks from './hooks/useWeather';
 
 jest.mock('./hooks/useSchedule', () => {
   const actual = jest.requireActual('./hooks/useSchedule');
@@ -29,6 +30,7 @@ jest.mock('./hooks/useWeather', () => ({
 describe('App', () => {
   const mockUseSchedule = scheduleHooks.useSchedule as jest.MockedFunction<typeof scheduleHooks.useSchedule>;
   const mockGetTodayDate = scheduleUtils.getTodayDate as jest.MockedFunction<typeof scheduleUtils.getTodayDate>;
+  const mockUseWeather = weatherHooks.useWeather as jest.MockedFunction<typeof weatherHooks.useWeather>;
 
   beforeEach(() => {
     mockGetTodayDate.mockReturnValue('2026-04-06');
