@@ -1,5 +1,10 @@
 # The Next Ferry
 
+[![Coverage](https://img.shields.io/badge/Coverage-80%2B%20green?style=flat&logo=javascript)](https://github.com/Loonz206/the-next-ferry/actions)
+[![CI](https://github.com/Loonz206/the-next-ferry/actions/workflows/ci.yml/badge.svg)](https://github.com/Loonz206/the-next-ferry/actions/workflows/ci.yml)
+[![Commitizen](https://img.shields.io/badge/Commitizen-friendly-blue?style=flat&logo=git)](https://commitizen.github.io/cz-cli/)
+[![Prettier](https://img.shields.io/badge/Prettier-code_style-blue?style=flat&logo=prettier)](https://prettier.io/)
+
 A single-page app that combines the **Washington State Ferries (WSF) Bremerton route** and the **Kitsap Transit Fast Ferry** into one unified weekly schedule — so you always know what's leaving, when, and whether it's a car ferry or an express passenger boat.
 
 Commuting between Bremerton and Seattle means choosing between two ferry systems with different tradeoffs. The fast ferry is quicker and passenger-only; WSF is slower but carries cars, and the best option can flip by direction. Getting home from Seattle adds another wrinkle, with different return costs depending on the service. This app puts both schedules in one place so you can compare departures, fares, and trip time at a glance.
